@@ -60,27 +60,23 @@
 // }}}
 // header{{{
 #header
+
   padding: 0
+  display: grid
+
+  grid-template-rows: 200px auto
+  @media (min-width: 601px)
+    grid-template-rows: auto
+    grid-template-columns: 1fr 1.75fr
+
   #ripple_container
     overflow: hidden
     svg
-      transform: scale(3)
+      transform: scale(3) translate(0, 7%)
       @media (min-width: 601px)
-        transform: scale(1)
-        transform: translate(-10%, 25%)
-        // transform: translateX(-10%)
-        // margin-top: -35.5%
+        transform: scale(3) translate(17%, 10%)
 
-        transform: translate(-10%, -25%)
-
-  position: relative
   #header_hero
-    @media (min-width: 601px)
-      position: absolute
-      top: 0
-      right: 0
-      width: 60%
-
     article
       position: relative
       #header_texts
