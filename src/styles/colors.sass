@@ -1,0 +1,136 @@
+$bg_light: #eee
+$fg_dark_text: #444
+$fg_dark_title: #222
+
+$bg_dark: #222
+$fg_light_text: #ddd
+$fg_light_text: #eee
+$fg_light_title: #fff
+
+$shadow: 0 0 1em 0 lightgrey
+
+$orange: #ef9740
+$orange: #f0aa55
+
+// $teal:#46a4a3
+$teal:#54b1b2
+$light_teal: #aadddb
+
+body
+  background: $bg_light
+
+h1, h2, h3
+  color: $fg_dark_title
+
+p,
+a
+  color: $fg_dark_text
+
+#call_to_action
+  h2:nth-child(2)
+    color: $orange
+  a h2
+    color: $teal
+    border: 0.10em solid $orange
+
+#footer
+  background: $teal
+
+  p,
+  a
+    color: $fg_light_text
+
+  a
+    text-decoration: underline
+
+  i
+    color: $teal
+    background: $fg_light_title
+
+  #links
+    &:before, &:after
+      background: $fg_light_title
+
+nav
+  box-shadow: 0 0 0.5em 0 grey
+
+#header_texts
+  h1, h2
+    color: $fg_light_title
+
+#who_we_are
+  a
+    color: $teal
+    border: 0.25em solid $teal
+    padding: 1em
+    width: max-content
+    font-weight: bold
+
+    &:after
+      content: ""
+      display: inline-block
+      transform: rotate(-45deg)
+      border: solid $teal
+      border-width: 0 2.5px 2.5px 0
+      padding: 2.5px
+      margin-left: 0.5em
+      margin-bottom: 0.10em
+
+#registration_container
+  box-shadow: $shadow
+  article
+    &:nth-child(2)
+      background: $teal
+      h2
+        color: $fg_light_title
+      p
+        color: $fg_light_text
+  a
+    background: $orange
+    color: $fg_light_title
+    font-weight: bold
+
+#registration
+  article
+    background: $bg_light
+    h2,
+    p
+      color: darken($teal, 10)
+  &:before
+    background: $light_teal
+
+#who_we_are
+  h3
+    color: $teal
+  h2
+    color: $orange
+
+  #text_container
+    border-left: 0.25em solid $orange
+
+#latest
+  &:before
+    background: $teal
+  h2
+    color: $orange
+  h3
+    color: $fg_light_title
+    &:first-child
+      color: $fg_light_title
+      @media (min-width: 601px)
+        color: $teal
+        
+  a
+    color: $orange
+    font-weight: bold
+
+
+.shadow
+  box-shadow: 0.75em 0.75em 0 0 $teal
+
+nav
+  a
+    color: $teal
+    &:last-child
+      color: $fg_light_title
+      background: $teal

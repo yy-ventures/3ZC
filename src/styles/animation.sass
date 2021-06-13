@@ -1,0 +1,61 @@
+.faded_out
+  transition: opacity .5s ease-in-out
+  transition-delay: calc(var(--order) * .5s - .5s)
+  opacity: 0
+
+.fade_in
+  opacity: 1
+
+.moved_right,
+.moved_left,
+.moved_down
+  opacity: 0
+
+.moved_right,
+.moved_left
+  transition: transform 1s ease-in-out,  opacity 1s ease-in-out
+
+.moved_down
+  transition: transform .5s linear,  opacity .5s linear
+  transition-delay: calc(var(--order) * 250ms - 250ms)
+
+.moved_right
+  transform: translateX(100%)
+.moved_left
+  transform: translateX(-100%)
+.moved_down
+  transform: translateY(20%)
+
+.move_back
+  transform: translateX(0)
+  opacity: 1
+
+// rippple{{{
+#Layer_1
+  #circle
+    // animation: change_color 9s linear 0s infinite alternate forwards
+    @keyframes #{change_color}
+      // 0%
+      //   fill: #54b1b2
+      33%
+        fill: #c4a46b
+      66%
+        fill: #f0aa55
+
+  .cls-1
+    animation: ripple 5s linear -5s infinite
+    transform-origin: center
+    animation-delay: calc(var(--order) * 1s)
+
+    // &:nth-child(2n)
+    //   fill: #c4a46b
+    // &:nth-child(3n)
+    //   fill: #f0aa55
+
+    transform: scale(0)
+    opacity: 1
+    @keyframes #{ripple}
+      100%
+        transform: scale(1)
+        opacity: 0
+// }}}
