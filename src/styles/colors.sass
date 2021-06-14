@@ -10,11 +10,13 @@ $fg_light_title: #fff
 $shadow: 0 0 1em 0 lightgrey
 
 $orange: #ef9740
-$orange: #f0aa55
+// $orange: #f0aa55
 
-// $teal:#46a4a3
-$teal:#54b1b2
-$light_teal: #aadddb
+$teal:#46a4a3
+// $teal:#54b1b2
+
+$light_teal: #aadcda
+// $light_teal: #aadddb
 
 body
   background: $bg_light
@@ -61,7 +63,7 @@ nav
 #who_we_are
   a
     color: $teal
-    border: 0.25em solid $teal
+    border: 0.10em solid $teal
     padding: 1em
     width: max-content
     font-weight: bold
@@ -76,26 +78,19 @@ nav
       margin-left: 0.5em
       margin-bottom: 0.10em
 
-#registration_container
-  box-shadow: $shadow
-  article
-    &:nth-child(2)
-      background: $teal
-      h2
-        color: $fg_light_title
-      p
-        color: $fg_light_text
-  a
-    background: $orange
-    color: $fg_light_title
-    font-weight: bold
-
 #registration
   article
-    background: $bg_light
-    h2,
+    box-shadow: $shadow
+    background: $teal
+    h2
+      color: $fg_light_title
     p
-      color: darken($teal, 10)
+      color: $fg_light_text
+
+    a
+      background: $orange
+      color: $fg_light_title
+      font-weight: bold
   &:before
     background: $light_teal
 
