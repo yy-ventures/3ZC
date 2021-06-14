@@ -30,17 +30,22 @@ section
   padding: 2.5em
   @media (min-width: 601px)
     padding: 5em
-    
 
 a
   text-decoration: none
   display: block
 
-// input,
-// button,
-// textarea,
-// select
-//   font: inherit
+input
+  display: block
+  width: 100%
+  &:focus
+    outline: none
+
+input,
+button,
+textarea,
+select
+  font: inherit
 
 h1, h2, h3, p
   max-width: 80ch

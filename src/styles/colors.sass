@@ -7,7 +7,9 @@ $fg_light_text: #ddd
 $fg_light_text: #eee
 $fg_light_title: #fff
 
-$shadow: 0 0 1em 0 lightgrey
+// $shadow: 0 0 1em 0 lightgrey
+// $shadow: 0 0 1em 0 grey
+$shadow: 0.25em 0.25em 0.25em 0 grey
 
 $orange: #ef9740
 // $orange: #f0aa55
@@ -32,8 +34,12 @@ a
   h2:nth-child(2)
     color: $orange
   a h2
-    color: $teal
-    border: 0.10em solid $orange
+    // color: $teal
+    // border: 0.10em solid $orange
+    background: $orange
+    color: $fg_light_title
+    box-shadow: $shadow
+
 
 #footer
   background: $teal
@@ -129,3 +135,39 @@ nav
     &:last-child
       color: $fg_light_title
       background: $teal
+
+#sign_up
+  background: $light_teal
+  section
+    background: $bg_light
+    box-shadow: $shadow
+
+    input
+      background: inherit
+      border: solid $fg_dark_text
+      border-width: 0 0 0.05em 0
+
+      &:last-child
+        color: $fg_light_title
+        background: $orange
+        border: none
+        box-shadow: $shadow
+
+    a
+      color: $orange
+
+    .button
+      box-shadow: $shadow
+
+      p,
+      i
+        color: $fg_light_title
+
+      &:nth-child(1)
+        background: #4367b1
+      &:nth-child(2)
+        background: #0183bf
+      &:nth-child(3)
+        background: #23a0f2
+      &:nth-child(4)
+        background: #da463a

@@ -1,0 +1,32 @@
+extends markups/layout
+block main
+  main#sign_up
+    section
+      article
+        h3
+          | Welcome to
+          |
+          span 3ZERO CLUB!
+        p Please fill up this form to register as a 3ZERO club member
+        form
+          input(type="text" placeholder="Full Name" required)
+          input(type="email" placeholder="Email Address" required)
+          input(type="password" placeholder="Password" required)
+          input(type="password" placeholder="Confirm Password" required)
+          input(type="submit" value="Regsiter")
+        p Already a member?
+        a(href="#") Sing In
+      p or
+      article
+        .button
+          i(class="fab fa-facebook-f")
+          p Register with Facebook
+        .button
+          i(class="fab fa-linkedin-in")
+          p Register with LinkedIn
+        .button
+          i(class="fab fa-twitter")
+          p Register with Twitter
+        .button
+          i(class="fab fa-google")
+          p Register with Goggle
