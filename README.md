@@ -1,6 +1,6 @@
 # 3zero.club: Official codebase for 3 Zero Club
 
-https://3zero.club
+https://yy-ventures.github.io/3ZC/
 
 # Dev Dependencies
 
