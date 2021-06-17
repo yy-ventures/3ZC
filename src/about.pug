@@ -1,17 +1,18 @@
 extends markups/layout
 include markups/header
 block main
-  +header('hero_about', 'About', '3ZERO Club' )
-  section#about_paragraphs
-    article#text_container
-      p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — #[strong zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing entrepreneurship in all.]
-      p This initiative of setting up a global network of 3ZERO Clubs is undertaken to make young people familiar with the goal of three zero world and ways to achieve this goal with the creative initiatives of young people. Each Club is a self-formed, self-contained mini-Club of five members with self-chosen tasks to play a role in creating a three zero world. Each Club empowers itself by connecting with other such Clubs, having a larger range of common features. The Clubs become exponentially powerful as they link themselves up with each other. This networking expedites, in a systematic way, the process of reaching the goal faster.
+  #about
+    +header('hero_about', 'About', '3ZERO Club' )
+    section#about_paragraphs
+      article#text_container
+        p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — #[strong zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing entrepreneurship in all.]
+        p This initiative of setting up a global network of 3ZERO Clubs is undertaken to make young people familiar with the goal of three zero world and ways to achieve this goal with the creative initiatives of young people. Each Club is a self-formed, self-contained mini-Club of five members with self-chosen tasks to play a role in creating a three zero world. Each Club empowers itself by connecting with other such Clubs, having a larger range of common features. The Clubs become exponentially powerful as they link themselves up with each other. This networking expedites, in a systematic way, the process of reaching the goal faster.
 
-  section#mission_vision.grid.two
-    article.moved_left
-      img(src="/public/images/mission_vision.png.webp").shadow
-    article.moved_right
-      h2 Vision
-      p The vision of the 3ZERO Club is to create a world of three zeros – #[strong zero net carbon emission, zero wealth concentration for ending poverty and zero unemployment by unleashing entrepreneurship in all.]
-      h2 Mission
-      p The mission of the 3ZERO Club is to inspire and enable the youth to ideate, create and lead with the entrepreneurial spirit to solve the most pressing social and environmental issues of our time.
+    section#mission_vision.grid.two
+      article.moved_left
+        img(src="/public/images/mission_vision.png.webp").shadow
+      article.moved_right
+        h2 Vision
+        p The vision of the 3ZERO Club is to create a world of three zeros – #[strong zero net carbon emission, zero wealth concentration for ending poverty and zero unemployment by unleashing entrepreneurship in all.]
+        h2 Mission
+        p The mission of the 3ZERO Club is to inspire and enable the youth to ideate, create and lead with the entrepreneurial spirit to solve the most pressing social and environmental issues of our time.
