@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 15
       - run: yarn
-      - run: yarn generate
+      - run: yarn build
       - run: touch ./dist/.nojekyll
       - uses: peaceiris/actions-gh-pages@v3
         with:

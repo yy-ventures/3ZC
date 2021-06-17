@@ -22,12 +22,16 @@
       position: relative
       #header_texts
         position: absolute
-        width: 100%
-        top: 50%
-        transform: translateY(-50%)
 
-        h1, h2
-          text-align: center
+        top: 25%
+        left: 5%
+
+        // width: 100%
+        // top: 50%
+        // transform: translateY(-50%)
+
+        // h1, h2
+        //   text-align: center
 
         // left: 50%
         // transform: translateX(-50%)
@@ -66,15 +70,18 @@
     padding-bottom: 5em
     position: relative
 
+    h2
+      text-align: center
+
     @media (min-width: 601px)
       width: max-content
       margin: 0 auto
 
     a
-      width: max-content
-      padding: 1em 2em
-      position: absolute
+      // width: max-content
+      // padding: 1em 2em
 
+      position: absolute
       bottom: 0
       left: 50%
       transform: translate(-50%, 50%)
@@ -125,6 +132,7 @@
 #call_to_action
   padding: 7.5em 5em
   text-align: center
+  place-items: center
   @media (min-width: 601px)
     grid-template-columns: 2fr 1fr
     text-align: start
@@ -140,10 +148,13 @@
 // footer{{{
 #footer
   align-items: center
+  padding-bottom: 1em
+  @media (min-width: 601px)
+    grid-template-columns: 1.5fr 1fr 1fr
   img
     width: 75%
     @media (min-width: 601px)
-      width: 50%
+      width: 35%
     margin: 0 auto
     margin-bottom: 2.5em
 
@@ -181,8 +192,7 @@
     margin-top: 2.5em
 
 // }}}
-
-
+// sign up{{{
 #sign_up
   padding: 5em 0
 
@@ -196,7 +206,7 @@
 
     margin: 0 auto
 
-    width: 80%
+    width: 90%
     @media (min-width: 601px)
       width: 75%
 
@@ -251,3 +261,7 @@
         display: inline-block
       a
         margin-left: 1ch
+// }}}
+
+// body
+//   overflow-x: hidden !important

@@ -17,8 +17,14 @@ h3
 #header_texts
   h2
     font-weight: 300
+    font-size: 1.25rem !important
+    @media (min-width: 601px)
+      font-size: 2rem !important
+      
   h1
-    font-size: 4rem !important
+    font-size: 2rem !important
+    @media (min-width: 601px)
+      font-size: 4rem !important
 
 nav a
   font-weight: bold
@@ -34,7 +40,13 @@ nav a
         font-weight: bold
 
 
+// #call_to_action
+//   article h2:first-child,
+//   a h2
+//     font-weight: normal
+
 #call_to_action
-  article h2:first-child,
-  a h2
+  article h2:first-child
     font-weight: normal
+  a
+    font-size: 1.5em

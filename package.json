@@ -1,13 +1,15 @@
 {
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "dev": "parcel --port 1234 src/*.pug",
-    "generate": "parcel build --public-url ./ src/*.pug"
+    "dev": "snowpack dev",
+    "build": "snowpack build"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "2.0.0-beta.2",
-    "@parcel/transformer-sass": "2.0.0-beta.2",
-    "js-yaml": "^4.1.0",
-    "parcel": "^2.0.0-beta.2"
+    "snowpack": "^3.5.8",
+    "@marlonmarcello/snowpack-plugin-pug": "^1.0.3",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "@snowpack/plugin-webpack": "^2.3.1",
+    "js-yaml": "^4.1.0"
   }
 }

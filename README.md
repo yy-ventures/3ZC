@@ -4,9 +4,10 @@ https://yy-ventures.github.io/3ZC/
 
 # Dev Dependencies
 
-- percel
-- parcel/transformer-pug
-- parcel/transformer-sass
+- snowpack
+- @marlonmarcello/snowpack-plugin-pug
+- @snowpack/plugin-sass
+- @snowpack/plugin-webpack
 - js-yaml
 
 # Project Dependencies

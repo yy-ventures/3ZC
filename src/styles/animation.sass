@@ -17,7 +17,7 @@
 
 .moved_down
   transition: transform .5s linear,  opacity .5s linear
-  transition-delay: calc(var(--order) * 250ms - 250ms)
+  transition-delay: calc(var(--order) * .25s)
 
 .moved_right
   transform: translateX(100%)
@@ -29,6 +29,9 @@
 .move_back
   transform: translateX(0)
   opacity: 1
+
+nav
+  transition: transform 500ms ease-in-out
 
 // rippple{{{
 #Layer_1

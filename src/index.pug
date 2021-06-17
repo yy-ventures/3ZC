@@ -4,7 +4,7 @@ block main
   section#header
     //- ripple{{{
     #ripple_container
-      img(src="../assets/images/ripple2.svg")
+      img(src="/public/images/ripple2.svg")
       //- svg#Layer_1(data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1136.47 849.88')
       //-   defs
       //-     style.
@@ -42,7 +42,7 @@ block main
     //- hero{{{
     #header_hero
       article
-        img(src="../assets/images/header.webp")
+        img(src="/public/images/header.webp")
         #header_texts
           h2.faded_out(style="--order: 2") Creating a World of
           h1.faded_out(style="--order: 4") THREE ZEROS
@@ -50,18 +50,18 @@ block main
   // }}}
   //- regsitration{{{
   section#registration
-    article.faded_out(style="--order: 1")
-      h2 Create a Club
-      p Help create a 3ZERO world by creating your own club.
-      a(href="sign-up.pug") REGISTER NOW
+    article.faded_out
+      h2.moved_down(style="--order: 1") Create a Club
+      p.moved_down(style="--order: 2") Help create a 3ZERO world by creating your own club.
+      a(href="sign-up" style="--order: 3").orange_button.moved_down REGISTER NOW
   // }}}
   //- who we are{{{
   section#who_we_are.grid.two
     article.moved_left
-      img(src="../assets/images/who_we_are.webp").shadow
+      img(src="/public/images/who_we_are.webp").shadow
     article.moved_right
       h3 Who We Are
-      h2 CREATING A WORLD OF 3 ZEROS
+      h2 Creating a World of Three Zeros
       #text_container
         p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing entrepreneurship in all.
       a Learn More
@@ -69,26 +69,30 @@ block main
   //- latest{{{
   section#latest
     h3 Latest
-    h2 SOCIAL BUSINESS AND 3ZERO CLUB EVENTS
+    h2 Social Business and 3ZERO Club Events
     #latest_container.grid.three
       article(style="--order: 1").moved_down
-        img(src="../assets/images/events_1.png.webp").shadow
+        img(src="/public/images/events_1.png.webp").shadow
         h3 Social Business Design Competition
-        a(href="") Learn more
+        a(href="#") Coming Soon
       article(style="--order: 2").moved_down
-        img(src="../assets/images/events_2.png.webp").shadow
+        img(src="/public/images/events_2.png.webp").shadow
         h3 Social Fiction Design Competition
-        a(href="") Learn more
+        a(href="#") Coming Soon
       article(style="--order: 3").moved_down
-        img(src="../assets/images/events_3.png.webp").shadow
+        img(src="/public/images/events_3.png.webp").shadow
         h3 Social Business Day
-        a(href="") Learn more
+        a(href="https://eventee.co/en/e/social-business-day-2021-9171" target="_blank" rel="noopener noreferrer") Learn more
   // }}}
   //- call to action{{{
   section#call_to_action.grid.two
     article.moved_left
       h2 TAKE YOUR FIRST STEP TOWARDS CREATING
       h2 A WORLD OF THREE ZEROS
-    a(href="" target="_blank" rel="noopener noreferrer").moved_right
-      h2 REGISTER NOW
+
+    //- a(href="" target="_blank" rel="noopener noreferrer").moved_right
+    //-   h2 REGISTER NOW
+
+    a(href="sign-up").moved_right.orange_button REGISTER NOW
+
   // }}}

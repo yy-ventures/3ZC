@@ -5,46 +5,46 @@ html
   //               Header
   //--------------------------------------
   head
-    title 3 Zero Club
+    title 3ZERO Club
 
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="shortcut icon" href="../assets/images/favicon.ico")
+    link(rel="shortcut icon" href="/public/images/favicon.ico")
 
-    link(rel="stylesheet", href="styles/index.sass")
-    script(src="scripts/index.js" defer)
+    link(rel="stylesheet", href="styles/index.css")
+    script(src="scripts/index.js" type="module" defer)
 
-    link(href="../assets/fonts/fontawesome/css/fontawesome.css" rel="stylesheet")
-    link(href="../assets/fonts/fontawesome/css/brands.css" rel="stylesheet")
-    //- link(href="../assets/fonts/fontawesome/css/solid.css" rel="stylesheet")
+    link(href="/public/fonts/fontawesome/css/fontawesome.css" rel="stylesheet")
+    link(href="/public/fonts/fontawesome/css/brands.css" rel="stylesheet")
+    //- link(href="/public/fonts/fontawesome/css/solid.css" rel="stylesheet")
 
   // }}}
   //- body{{{
   body
     //- navigation{{{
     nav
-      a(href="#")
-        img(src="../assets/images/3ZC.svg")
+      a(href="/")
+        img(src="/public/images/3ZC.svg")
       #menu
         a(href="#") Home
-        a(href="#") Who We Are
+        a(href="#") About
         a(href="#") Events
         a(href="#") Register
-        a(href="#") 3Z Globel Center
+        a(href="#") 3Z Global Centre
     // }}}
     block main
     //- footer{{{
     section#footer.grid.three
-      article.moved_left
-        img(src="../assets/images/3ZC_alt.svg")
+      article
+        img(src="/public/images/3ZC_alt.svg")
         p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing social entrepreneurship in all.
-      article#links.moved_down(style="--order: 1")
+      article#links(style="--order: 1")
         a(href="#" target="_blank" rel="noopener noreferrer") Home
         a(href="#" target="_blank" rel="noopener noreferrer") Who We Are
         a(href="#" target="_blank" rel="noopener noreferrer") Events
         a(href="#" target="_blank" rel="noopener noreferrer") Contact
         a(href="#" target="_blank" rel="noopener noreferrer") Register
-      article.moved_right
+      article
         #contact
           a(href="#" target="_blank" rel="noopener noreferrer")
             i(class="fab fa-facebook-f")
@@ -60,6 +60,6 @@ html
         p 9th Floor, Grameen Telecom Bhaban,
         p Zoo Road, Mirpur, Dhaka-1216, Bangladesh
         p#email Email: connect@3zero.Club
-      article.moved_down(style="--order: 2")
+      article(style="--order: 2")
         p © 2021.  Yunus Centre. All Rights Reserved.
     // }}}
