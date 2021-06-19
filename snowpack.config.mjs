@@ -1,4 +1,10 @@
 export default {
+  mount: {
+    public: { url: "/public", static: true, resolve: false },
+    src: "/",
+    // public: '/',
+    // src: '/dist'
+  },
   exclude: [
     '**/src/styles/**',
     '**/src/markups/**',
@@ -27,12 +33,6 @@ export default {
     //   }
     // ],
   ],
-  mount: {
-    public: { url: "/public", static: true, resolve: false },
-    src: "/",
-    // public: '/',
-    // src: '/dist'
-  },
   devOptions: {
     port: 1234,
     open: "none"
