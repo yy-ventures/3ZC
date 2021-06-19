@@ -1,7 +1,7 @@
 export default {
   mount: {
-    public: { url: "/public", static: true, resolve: false },
-    // public: '/public',
+    // public: { url: "/public", static: true, resolve: false },
+    public: '/public',
     src: "/",
   },
   exclude: [
