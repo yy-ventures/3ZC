@@ -38,13 +38,14 @@ export default {
     open: "none"
   },
   buildOptions: {
+    // baseUrl: '/3ZC/',
     baseUrl: './',
     out: "dist"
   },
   // optimize: {
-    // minify: true,
-    //   bundle: true,
-    //   splitting: true,
-    //   treeshake: true,
+  // minify: true,
+  //   bundle: true,
+  //   splitting: true,
+  //   treeshake: true,
   // }
 };
