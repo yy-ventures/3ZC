@@ -2,13 +2,13 @@
 //==============================================================================
 //                              Select Dom
 //==============================================================================
-export const doms = (selector) => document.querySelectorAll(selector);
+const doms = (selector) => document.querySelectorAll(selector);
 /*}}}*/
 // observer dom{{{
 //==============================================================================
 //                              Observer Dom
 //==============================================================================
-export const observer_dom = (
+const observer_dom = (
   dom,
   action_is_intersecting,
   action_not_intersecting
@@ -30,7 +30,7 @@ export const observer_dom = (
 //==============================================================================
 //                       Toggle Navigation on Scroll
 //==============================================================================
-export const toggle_navigation_on_scroll = () => {
+const toggle_navigation_on_scroll = () => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > window.position_old) {
       if (!window.nav_hidden) {
@@ -49,7 +49,7 @@ export const toggle_navigation_on_scroll = () => {
 //==============================================================================
 //                              Add Class on Focus
 //==============================================================================
-export const add_class_on_focus = (list) => {
+const add_class_on_focus = (list) => {
   for (const key in list) {
     doms(key).forEach((d) => {
       observer_dom(d, (dom) => dom.classList.add(list[key]));
@@ -61,7 +61,7 @@ export const add_class_on_focus = (list) => {
 //==============================================================================
 //                              Toggle Class on Focus
 //==============================================================================
-export const toggle_class_on_focus = (list) => {
+const toggle_class_on_focus = (list) => {
   for (const key in list) {
     doms(key).forEach((d) => {
       observer_dom(
@@ -77,7 +77,7 @@ export const toggle_class_on_focus = (list) => {
 //==============================================================================
 //                              Update Scroll
 //==============================================================================
-export const update_scroll = () => {
+const update_scroll = () => {
   window.addEventListener('scroll', () => {
     document.body.style.setProperty(
       '--scroll',
