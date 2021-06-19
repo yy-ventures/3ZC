@@ -1,9 +1,8 @@
 export default {
   mount: {
-    public: { url: "/public", static: true, resolve: false },
+    // public: { url: "/public", static: true, resolve: false },
+    public: '/public',
     src: "/",
-    // public: '/',
-    // src: '/dist'
   },
   exclude: [
     '**/src/styles/**',
@@ -43,7 +42,7 @@ export default {
     out: "dist"
   },
   // optimize: {
-  // minify: true,
+  //   minify: true,
   //   bundle: true,
   //   splitting: true,
   //   treeshake: true,
