@@ -26,6 +26,42 @@ const observer_dom = (
   io.observe(dom);
 };
 /*}}}*/
+// toggle class on focus{{{
+//==============================================================================
+//                              Toggle Class on Focus
+//==============================================================================
+const toggle_class_on_focus = (list) => {
+  for (const key in list) {
+    list[key].forEach((dom_string) => {
+      doms(dom_string).forEach(d => {
+        observer_dom(
+          d,
+          (dom) => dom.classList.add(key),
+          (dom) => dom.classList.remove(key)
+        );
+      })
+    });
+  }
+}; //
+/*}}}*/
+// add class on focus{{{
+//==============================================================================
+//                              Add Class on Focus
+//==============================================================================
+const add_class_on_focus = (list) => {
+  for (const key in list) {
+    list[key].forEach((dom_string) => {
+      doms(dom_string).forEach(d => {
+        observer_dom(
+          d,
+          (dom) => dom.classList.add(key)
+        );
+      })
+    });
+  }
+}; //
+/*}}}*/
+
 // toggle navigation on_scroll{{{
 //==============================================================================
 //                       Toggle Navigation on Scroll
@@ -45,34 +81,6 @@ const toggle_navigation_on_scroll = () => {
   });
 };
 /*}}}*/
-// add class on focus{{{
-//==============================================================================
-//                              Add Class on Focus
-//==============================================================================
-const add_class_on_focus = (list) => {
-  for (const key in list) {
-    doms(key).forEach((d) => {
-      observer_dom(d, (dom) => dom.classList.add(list[key]));
-    });
-  }
-}; //
-/*}}}*/
-// toggle class on focus{{{
-//==============================================================================
-//                              Toggle Class on Focus
-//==============================================================================
-const toggle_class_on_focus = (list) => {
-  for (const key in list) {
-    doms(key).forEach((d) => {
-      observer_dom(
-        d,
-        (dom) => dom.classList.add(list[key]),
-        (dom) => dom.classList.remove(list[key])
-      );
-    });
-  }
-}; //
-/*}}}*/
 // update scroll{{{
 //==============================================================================
 //                              Update Scroll
@@ -86,3 +94,4 @@ const update_scroll = () => {
   });
 };
 /*}}}*/
+
