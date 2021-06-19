@@ -23,6 +23,10 @@ export default {
     public: { url: "/public", static: true, resolve: false },
     src: "/",
   },
+  devOptions: {
+    port: 1234,
+    open: "none"
+  },
   buildOptions: {
     out: "dist"
   }
