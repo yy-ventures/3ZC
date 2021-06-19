@@ -39,7 +39,7 @@ export default {
   },
   buildOptions: {
     // baseUrl: '/3ZC/',
-    baseUrl: './',
+    // baseUrl: './',
     out: "dist"
   },
   // optimize: {
