@@ -38,8 +38,8 @@ export default {
     open: "none"
   },
   buildOptions: {
-    // baseUrl: '/3ZC/',
-    baseUrl: './',
+    baseUrl: '/3ZC/',
+    // baseUrl: './',
     out: "dist"
   },
   // optimize: {
