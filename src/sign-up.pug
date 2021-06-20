@@ -1,11 +1,6 @@
 extends markups/layout
 block main
   main#sign_up
-
-    //- #pop_up
-    //-   section
-    //-     h1 Thank you for your interest in 3ZERO Club. The registration of the 3ZERO Club will begin on June 28, 2021, at 14:00 (GMT+6). Please check back again to create a 3ZERO Club.
-
     section
       article
         h3
@@ -13,20 +8,4 @@ block main
           |
           span 3ZERO Club!
         //- p Please fill up this form to register as a 3ZERO Club member
-        form#form_sign_up
-          input(type="text" name="full_name" placeholder="Full Name")
-          input(type="email" name="email" placeholder="Email Address")
-          input.submit(type="submit" value="Regsiter")
-        p Already a member?
-        a(href="sign-in") Sing In
-      p or
-      article
-        .button#sign_in_google
-          i(class="fab fa-google")
-          p Register with Goggle
-        .button
-          i(class="fab fa-facebook-f")
-          p Register with Facebook
-        .button
-          i(class="fab fa-twitter")
-          p Register with Twitter
+        p Thank you for your interest in 3ZERO Club. The registration of the 3ZERO Club will begin on #[strong June 28, 2021, at 14:00 (GMT+6).] Please check back again to create a 3ZERO Club.
