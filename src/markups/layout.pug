@@ -35,9 +35,14 @@ html
   body
     //- navigation{{{
     nav
+      input#toggler(type="checkbox")
+      label(for="toggler" )#menu_toggler_label
+        #menu_button
+          #bar
+
       a(href="/")
         img(src="public/images/3ZC.svg")
-      #menu
+      .menu
         a(href="/") Home
         a(href="about") About
         a(href="/#latest") Events
