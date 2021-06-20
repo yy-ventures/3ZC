@@ -35,12 +35,12 @@ html
   body
     //- navigation{{{
     nav
-      a(href="index")
+      a(href="/")
         img(src="public/images/3ZC.svg")
       #menu
-        a(href="index") Home
+        a(href="/") Home
         a(href="about") About
-        a(href="events") Events
+        a(href="/#latest") Events
         a(href="sign-up") Register
         a(href="3z-global-centre") 3Z Global Centre
     // }}}
@@ -49,33 +49,37 @@ html
     section#footer.grid.three
       article
         img(src="public/images/3ZC_alt.svg")
-        p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing social entrepreneurship in all.
+        p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing entrepreneurship in all.
       article#links(style="--order: 1")
-        a(href="/" target="_blank" rel="noopener noreferrer") Home
-        a(href="/about" target="_blank" rel="noopener noreferrer") Who We Are
-        a(href="/events" target="_blank" rel="noopener noreferrer") Events
-        a(href="/3z-global-centre" target="_blank" rel="noopener noreferrer") Contact
-        a(href="/sign-up" target="_blank" rel="noopener noreferrer") Register
+        a(href="/") Home
+        a(href="/about") About
+        a(href="/#latest") Events
+        a(href="/3z-global-centre") Contact
+        a(href="/sign-up") Register
       article
-        #contact
-          a(href="#" target="_blank" rel="noopener noreferrer")
-            i(class="fab fa-facebook-f")
-          a(href="#" target="_blank" rel="noopener noreferrer")
-            i(class="fab fa-instagram")
-          a(href="#" target="_blank" rel="noopener noreferrer")
-            i(class="fab fa-twitter")
-          a(href="#" target="_blank" rel="noopener noreferrer")
-            i(class="fab fa-youtube")
-          a(href="#" target="_blank" rel="noopener noreferrer")
-            i(class="fab fa-linkedin-in")
+
+        //- #contact
+        //-   a(href="#" target="_blank" rel="noopener noreferrer")
+        //-     i(class="fab fa-facebook-f")
+        //-   a(href="#" target="_blank" rel="noopener noreferrer")
+        //-     i(class="fab fa-instagram")
+        //-   a(href="#" target="_blank" rel="noopener noreferrer")
+        //-     i(class="fab fa-twitter")
+        //-   a(href="#" target="_blank" rel="noopener noreferrer")
+        //-     i(class="fab fa-youtube")
+        //-   a(href="#" target="_blank" rel="noopener noreferrer")
+        //-     i(class="fab fa-linkedin-in")
+
         p EXO, 3Z Global Centre
         p 9th Floor, Grameen Telecom Bhaban,
         p Zoo Road, Mirpur, Dhaka-1216, Bangladesh
         p#email Email: connect@3zero.Club
       article(style="--order: 2")
         p © 2021.  Yunus Centre. All Rights Reserved.
-      article
-      article
-        p Supported by Centre Yunus Paris and
-        p Yunus and You – The YY Foundation
+
+      //- article
+      //- article
+      //-   p Supported by Centre Yunus Paris and
+      //-   p Yunus and You – The YY Foundation
+
     // }}}
