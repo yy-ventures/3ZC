@@ -226,13 +226,16 @@
 
     // align-items: center
 
+    .submit
+      margin: 2.5em 0
+
     input
       margin-top: 1em
       // width: 100%
       padding: 0.5em
 
-      &:last-child
-        margin: 2.5em 0
+      // &:last-of-type
+      //   margin: 2.5em 0
         
     .button
       padding: 1em 2.5em
@@ -295,3 +298,21 @@
 
 #location
   grid-gap: 5em
+
+.register
+  @media (min-width: 601px)
+    grid-template-columns: auto !important
+
+  .input_section
+    display: grid
+    grid-template-columns: auto auto
+
+    & > :nth-child(2n)
+      align-self: end
+      margin-left: 2.5em
+
+  p
+    margin-top: 2.5em
+
+  h3
+    margin-top: 5em

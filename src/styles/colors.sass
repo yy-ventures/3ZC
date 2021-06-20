@@ -140,15 +140,16 @@ nav
   section
     background: $bg_light
 
-    input
+    input,
+    select
       background: inherit
       border: solid $fg_dark_text
       border-width: 0 0 0.05em 0
 
-      &:last-child
-        color: $fg_light_title
-        background: $orange
-        border: none
+    .submit
+      color: $fg_light_title
+      background: $orange
+      border: none
 
     a
       color: $orange
@@ -183,3 +184,13 @@ nav
     color: $teal
   p
     border-left: 0.25em solid $orange
+
+
+.register
+  h1,
+  h2,
+  h3
+    color: $teal
+
+  & article > p:first-of-type
+    color: $orange

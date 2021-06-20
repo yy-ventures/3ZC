@@ -5,8 +5,8 @@ export default {
     src: "/",
   },
   exclude: [
-    '**/src/styles/**',
-    '**/src/markups/**',
+    // '**/src/styles/**',
+    // '**/src/markups/**',
   ],
   plugins: [
     ["@marlonmarcello/snowpack-plugin-pug",
@@ -23,10 +23,12 @@ export default {
         },
       },
     ],
+
     ['@snowpack/plugin-webpack',
       {
       }
     ]
+
     // ['@snowpack/plugin-postcss',
     //   {
     //   }
@@ -38,13 +40,6 @@ export default {
   },
   buildOptions: {
     baseUrl: './',
-    // baseUrl: '/3ZC/',
     out: "dist"
   },
-  // optimize: {
-  //   minify: true,
-  //   bundle: true,
-  //   splitting: true,
-  //   treeshake: true,
-  // }
 };

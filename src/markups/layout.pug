@@ -12,14 +12,23 @@ html
 
     link(rel="shortcut icon" href="public/images/favicon.ico")
 
-    link(rel="stylesheet", href="index.css")
-
-    script(src="scripts/dom_utils.js" defer)
-    script(src="scripts/index.js" type="module" defer)
-
     link(href="public/fonts/fontawesome/css/fontawesome.css" rel="stylesheet")
     link(href="public/fonts/fontawesome/css/brands.css" rel="stylesheet")
     //- link(href="public/fonts/fontawesome/css/solid.css" rel="stylesheet")
+
+    link(rel="stylesheet", href="index.css")
+
+    script(src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js")
+    script(src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js")
+    script(src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js")
+    script(src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js")
+
+    script(src="scripts/dom_utils.js" defer)
+    script(src="scripts/firebase.js" defer)
+    script(src="scripts/index.js" type="module" defer)
+
+
+
 
   // }}}
   //- body{{{

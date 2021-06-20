@@ -8,15 +8,15 @@ block main
           |
           span 3ZERO Club!
         //- p Please fill up this form to register as a 3ZERO Club member
-        form
-          input(type="text" placeholder="Full Name" required)
-          input(type="email" placeholder="Email Address" required)
-          input(type="submit" value="Regsiter")
+        form#form_sign_up
+          input(type="text" name="full_name" placeholder="Full Name")
+          input(type="email" name="email" placeholder="Email Address")
+          input.submit(type="submit" value="Regsiter")
         p Already a member?
         a(href="sign-in") Sing In
       p or
       article
-        .button
+        .button#sign_in_google
           i(class="fab fa-google")
           p Register with Goggle
         .button
@@ -25,6 +25,3 @@ block main
         .button
           i(class="fab fa-twitter")
           p Register with Twitter
-        .button
-          i(class="fab fa-linkedin-in")
-          p Register with LinkedIn
