@@ -200,3 +200,20 @@ nav
 #call_to_action
   span
     color: $orange
+
+
+.underline
+  &:after
+    content: ""
+    display: block
+    height: 3px
+    transform: scaleX(0)
+    background: $orange
+
+    transition: transform 750ms
+    // transition: transform 250ms linear
+    transform-origin: right
+
+  &:hover:after
+    transform-origin: left
+    transform: scaleX(1)
