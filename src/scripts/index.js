@@ -3,7 +3,7 @@ add_class_on_focus({
   'fade_in': ['.faded_out'],
 });
 
-toggle_navigation_on_scroll()
+// toggle_navigation_on_scroll()
 
 doms('#form_sign_up')[0].onsubmit = async (event) => {
   event.preventDefault()
