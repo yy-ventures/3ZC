@@ -132,6 +132,10 @@ nav
   box-shadow: 0 0 0.5em 0 grey
   a
     color: $teal
+    &:hover,
+    &:active
+      color: $orange !important
+
     &:last-child
       color: $fg_light_title
       background: $teal
@@ -220,3 +224,6 @@ nav
   &:hover:after
     transform-origin: left
     transform: scaleX(1)
+
+.active_link
+  color: $orange !important

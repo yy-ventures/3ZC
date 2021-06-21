@@ -29,3 +29,9 @@ window.onload = () => {
     preloader.remove()
   }, 2000);
 }
+
+try {
+  doms(`nav a[href="${location.pathname.split("/")[1]}"]`)[0].classList.add('active_link')
+} catch {
+  doms('nav .menu a:first-of-type')[0].classList.add('active_link')
+}
