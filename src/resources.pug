@@ -1,0 +1,70 @@
+extends markups/layout
+include markups/header
+block main
+  #resources
+    +header('hero_resources', '', 'Resources' )
+
+    section
+      h2 3ZERO Club - Resources
+
+      //- h3.title Documents
+      h3.title Documents, Branding & Logos
+      .resources_item_container.grid.two
+
+        .resources_item
+          aside
+            img(src="public/images/who_we_are.webp").shadow
+          article
+            h3 Concept Note
+            p The concept note is an overview of 3ZERO Club.  It contains brief descriptions about 3ZERO Club its activities and structure.
+            a(href="public/resources/3ZERO_Club_Concept_Note.pdf" target="_blank" rel="noopener noreferrer" download).orange_button Download
+
+        .resources_item
+          aside
+            img(src="public/images/who_we_are.webp").shadow
+          article
+            h3 Logos
+            p The logo of 3ZERO Club, including all variations.
+            a(href="public/resources/3ZERO_Club_logos.zip" target="_blank" rel="noopener noreferrer" download).orange_button Download
+
+        .resources_item
+          aside
+            img(src="public/images/who_we_are.webp").shadow
+          article
+            h3 Brand Guideline
+            p The brand guideline for 3ZERO Club contains all the necessary information and guidelines on how to incorporate branding for all kinds of communication, both online and offline.
+            a(href="public/resources/3ZERO_Club_Brand_Guideline.pdf" target="_blank" rel="noopener noreferrer" download).orange_button Download
+
+
+        //- .resources_item
+        //-   aside
+        //-     img(src="public/images/who_we_are.webp").shadow
+        //-   article
+        //-     h3 Handbook
+        //-     p A complete handbook about 3ZERO Club.
+        //-     a(href="#" target="_blank" rel="noopener noreferrer") Download
+
+        //- .resources_item
+        //-   aside
+        //-     img(src="public/images/who_we_are.webp").shadow
+        //-   article
+        //-     h3 Flyer
+        //-     p The logo of 3ZERO Club, including all variations.
+        //-     a(href="" target="_blank" rel="noopener noreferrer") Download
+
+      //- h3.title Logo & Branding
+      //- .resources_item_container.grid.two
+      //-   .resources_item
+      //-     aside
+      //-       img(src="public/images/who_we_are.webp").shadow
+      //-     article
+      //-       h3 Brand Guideline
+      //-       p The brand guideline for 3ZERO Club contains all the necessary information and guidelines on how to incorporate branding for all kinds of communication, both online and offline.
+      //-       a(href="" target="_blank" rel="noopener noreferrer").orange_button Download
+      //-   .resources_item
+      //-     aside
+      //-       img(src="public/images/who_we_are.webp").shadow
+      //-     article
+      //-       h3 3ZERO Club - Logo
+      //-       p The logo of 3ZERO Club, including all variations.
+      //-       a(href="" target="_blank" rel="noopener noreferrer").orange_button Download

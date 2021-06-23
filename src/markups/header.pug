@@ -42,5 +42,6 @@ mixin header(image, h2, h1)
       article
         img(src=`public/images/${image}.png.webp`)
         #header_texts
-          h2.faded_out(style="--order: 2")= h2
+          if(h2)
+            h2.faded_out(style="--order: 2")= h2
           h1.faded_out(style="--order: 4")= h1

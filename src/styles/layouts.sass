@@ -331,3 +331,26 @@
   background: white
   opacity: 1
   transition: opacity 1.5s
+
+#resources
+  .title
+    display: flex
+    margin: 1em 0
+    &:after
+      margin-left: 1em
+      content: ''
+      display: block
+      flex: 1
+      align-self: center
+      height: 0.10em
+      background: red
+
+  .resources_item_container
+    .resources_item
+      display: grid
+      grid-template-columns: auto auto
+      gap: 2.5em
+
+      p,
+      a
+        margin-top: 0.5em
