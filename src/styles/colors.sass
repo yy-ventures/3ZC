@@ -140,6 +140,11 @@ nav
       color: $fg_light_title
       background: $teal
 
+      &:hover,
+      &.active_link
+        background: $orange
+        color: $fg_light_title !important
+
 input,
 select,
 textarea
@@ -232,7 +237,6 @@ input[type="submit"]
 
 .active_link
   color: $orange !important
-
 
 #resources
   h2
