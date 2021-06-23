@@ -147,16 +147,15 @@ textarea
   border: solid $fg_dark_text
   border-width: 0 0 0.05em 0
 
+input[type="submit"]
+  background: $orange
+  color: $fg_light_title
+  border: none
+
 #sign_up
   background: $light_teal
   section
     background: $bg_light
-
-    input,
-    select
-      background: inherit
-      border: solid $fg_dark_text
-      border-width: 0 0 0.05em 0
 
     .submit
       color: $fg_light_title
@@ -244,3 +243,16 @@ textarea
   .title
     &:after
       background: $teal
+
+#tzgc
+  #contact
+    h2
+      color: $teal
+      margin-bottom: 1em
+
+    input,
+    textarea
+      margin-top: 1em
+
+    input[type="submit"]
+      margin-top: 2.5em
