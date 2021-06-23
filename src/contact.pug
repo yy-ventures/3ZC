@@ -1,0 +1,28 @@
+extends markups/layout
+include markups/header
+block main
+  //- #tzgc
+  #contact_section
+    //- +header('hero_3zgc', '', '3Z Global Centre' )
+    //- section#location
+    section#location.grid.two
+
+      //- article.moved_left
+      //-   iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.2938915827895!2d90.34826811408531!3d23.80814619248678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14bae48ccf5%3A0x4b677293410b7502!2sYY%20Ventures%20Limited!5e0!3m2!1sen!2sbd!4v1624126967642!5m2!1sen!2sbd" allowfullscreen="" loading="lazy").shadow
+
+      //- article.moved_left
+      article#contact
+        h2 Write to Us
+        form#form_contact
+          input(type="text" name="first_name" placeholder="Full Name")
+          input(type="email" name="first_name" placeholder="Email Address")
+          textarea(placeholder="Message" rows='5')
+          input(type="submit" value="Send Message")
+
+      //- article.moved_right
+      article
+        #text_container
+          p EXO, 3Z Global Centre
+          p 9th Floor, Grameen Telecom Bhaban,
+          p Zoo Road, Mirpur, Dhaka-1216, Bangladesh
+          p Email: connect@3zero.Club
