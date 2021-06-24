@@ -153,7 +153,7 @@
 // }}}
 // footer{{{
 #footer
-  align-items: center
+  // align-items: center
   padding-bottom: 1em
   @media (min-width: 601px)
     grid-template-columns: 1.5fr 1fr 1fr
@@ -415,6 +415,21 @@ textarea
 // }}}
 // about{{{
 #about
+  #club
+    padding: 0
+    grid-gap: 0
+    article:first-child
+      padding: 5em
+      p
+        margin-top: 1em
+
+    article:last-child
+      overflow: hidden
+      img
+        transform: scale(3)
+        @media (min-width: 601px)
+          transform: scale(3) translate(-17%, 5%)
+
   #focus
     place-items: center
     #text_container
