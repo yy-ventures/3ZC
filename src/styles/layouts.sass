@@ -436,8 +436,10 @@ textarea
       margin-top: 2.5em
 
   #focus_areas
+
     padding-top: 0
     padding-bottom: 0
+
     .grid
       margin-top: 2.5em
       grid-template-columns: repeat(3, auto)
@@ -445,12 +447,28 @@ textarea
       @media (min-width: 601px)
         grid-template-columns: repeat(5, auto)
 
+      height: 0
+      overflow: hidden
+
       p
         padding-left: 1em
 
     & > p
       max-width: 100%
       margin-top: 2.5em
+
+    input
+      display: none
+
+    label
+      display: flex
+      justify-content: space-between
+
+    #toggler_accordion:checked
+      ~ .grid
+        height: 100%
+      ~ label .arrow:after
+        transform: rotate(45deg)
 
   #activities
     p

@@ -24,3 +24,13 @@
     @media (min-width: 601px)
       grid-template-columns: repeat(3, 1fr)
 // }}}
+
+.arrow
+  &:after
+    content: ''
+    display: inline-block
+    border: solid currentColor
+    border-width: 0 0.15em 0.15em 0
+    transform: rotate(-45deg)
+    padding: 0.25em
+    transition: transform 0.5s
