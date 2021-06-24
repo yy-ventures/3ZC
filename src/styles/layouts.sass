@@ -447,8 +447,9 @@ textarea
       @media (min-width: 601px)
         grid-template-columns: repeat(5, auto)
 
-      height: 0
       overflow: hidden
+      max-height: 0
+      transition: max-height 0.5s
 
       p
         padding-left: 1em
@@ -466,7 +467,7 @@ textarea
 
     #toggler_accordion:checked
       ~ .grid
-        height: 100%
+        max-height: 600px
       ~ label .arrow:after
         transform: rotate(45deg)
 
