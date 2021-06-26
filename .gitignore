@@ -3,3 +3,6 @@ dist/
 
 yarn.lock
 yarn-error.log
+
+functions/node_modules/
+functions/yarn.lock

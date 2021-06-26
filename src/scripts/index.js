@@ -36,34 +36,54 @@ try {
   doms('nav .menu a:first-of-type')[0].classList.add('active_link')
 }
 
-const get_checked_values = (elements) => Object.values(elements).filter(box => box.checked).map(dom => dom.value)
+try {
+  doms('#form_register_club')[0].onsubmit = async (event) => {
+    event.preventDefault()
+    const {
+      email_kp,
+      email_dkp,
+      email_m1,
+      email_m2,
+      email_m3,
+      zipcode,
+      address,
+      state
+    } = Object.fromEntries(new FormData(event.target))
 
-doms('#form_register_club')[0].onsubmit = async (event) => {
-  event.preventDefault()
-  const {
-    email_kp,
-    email_dkp,
-    email_m1,
-    email_m2,
-    email_m3,
-    zipcode,
-    address,
-    state
-  } = Object.fromEntries(new FormData(event.target))
+    const zeros = get_checked_values(event.target.elements['zeros'])
 
-  const zeros = get_checked_values(event.target.elements['zeros'])
+    const focus_area = doms('#form_register_club #focus')[0].value
+    const country = doms('#form_register_club #country')[0].value
 
-  const focus_area = doms('#form_register_club #focus')[0].value
-  const country = doms('#form_register_club #country')[0].value
+    // db.collection('clubs').add({
+    //   email_key_person: email_kp,
+    //   email_deputy_key_person: email_dkp,
+    //   email_member_1: email_m1,
+    //   email_member_2: email_m2,
+    //   email_member_3: email_m3,
+    //   zipcode,
+    //   address,
+    //   state,
+    //   country,
+    //   attractive_zeros: zeros,
+    //   focus_area,
+    // })
 
-  console.log(zeros)
+    db.collection('clubs').add({
+      address,
+    })
 
-  // window.location.href = '/register';
-  // try{
-  //   const result = await auth.createUserWithEmailAndPassword(email, 'asdflkj')
-  //   console.log(result)
-  // }catch(error){
-  //   console.log(error)
-  // }
+    // window.location.href = '/';
 
+    // try{
+    //   const result = await auth.createUserWithEmailAndPassword(email, 'asdflkj')
+    //   console.log(result)
+    // }catch(error){
+    //   console.log(error)
+    // }
+
+  }
+} catch (error) {
+  //
 }
+
