@@ -4,79 +4,60 @@ block main
     section.register
       article
         h1 3ZERO Club
-        h2 Member Registration Form
-        p Prospective members should fill out this registration form for becoming a registered 3ZERO Club member.  For questions, please contact connect@3zero.club
+        h2 Club Registration Form
+        p Prospective clubs should fill out the registration form below in order to become a registered 3ZERO Club. For questions, please contact connect@3zero.club
 
         form#form_regsiter
-
-          .input_section
-            p Membership Type
-            .input_container
-              input#q1_a(type="radio" name="membership_type" value="new")
-              label(for="q1_a") New Membership
-              input#q1_b(type="radio" name="membership_type" value="renewing")
-              label(for="q1_b") Renewing
-              input#q1_c(type="radio" name="membership_type" value="reinstated")
-              label(for="q1_c") Reinstated
-
-            p Are you joining an existing 3ZERO Club?
-            .input_container
-              input#q2_a(type="radio" name="existing_member" value="yes")
-              label(for="q2_b") Yes
-              input#q2_b(type="radio" name="existing_member" value="no")
-              label(for="q2_b") No
-
-
-            p Then, would you like to create and register a 3ZERO Club?
-            .input_container
-              input#q3_a(type="radio" name="3zero_club" value="yes")
-              label(for="q3_b") Yes
-              input#q3_b(type="radio" name="3zero_club" value="no")
-              label(for="q3_b") No
-              input#q3_c(type="radio" name="3zero_club" value="later")
-              label(for="q3_c") Later
-
           h3 Member Information
-
           .input_section
-            p First Name
-            input(type="text" name="first_name" placeholder="First Name")
-            p Last Name
-            input(type="text" name="last_name" placeholder="Last Name")
+            p Email of Key Person
+            input(type="email" placeholder="Email of Key Person")
+            p Email of Deputy Key Person
+            input(type="email" placeholder="Email of Deputy Key Person")
+            p Email of Member 1
+            input(type="email" placeholder="Email of Member 1")
+            p Email of Member 2
+            input(type="email" placeholder="Email of Member 2")
+            p Email of Member 3
+            input(type="email" placeholder="Email of Member 3")
 
-            p Gender
-            .input_container
-              input#q4_a(type="radio" name="gender" value="male")
-              label(for="q4_a") Male
-              input#q4_b(type="radio" name="gender" value="female")
-              label(for="q4_b") Female
-              input#q4_c(type="radio" name="gender" value="other")
-              label(for="q4_c") Other
+          h3 Club Information
+          .input_section
+            p Which of the three zeros attracts you the most?
 
-            p Date of Birth
-            input(type="date" name="date_of_birth" placeholder="Last Name")
+            aside
+              input(type="checkbox" value="Zero net carbon emission ")
+              p Zero net carbon emission 
+              input(type="checkbox" value="Zero net carbon emission ")
+              p Zero net carbon emission 
 
-            p Are you a student?
-            .input_container
-              input#q5_a(type="radio" name="student" value="yes")
-              label(for="q5_a") Yes
-              input#q5_b(type="radio" name="student" value="no")
-              label(for="q5_b") No
-
-            p What is your level of education?
-            select#education
-              option(selected value="psc") P.S.C.
-              option(value="jsc") J.S.C.
-              option(value="ssc") S.S.C.
-              option(value="hsc") H.S.C.
-
-            p What is your profession?
-            input(type="text" name="profession" placeholder="Profession")
-
-            p Name of your organization
-            input(type="text" name="organization" placeholder="Organization")
-
-            p Your position in your organization
-            input(type="text" name="position" placeholder="Position")
+            p Club's Focus Area
+            select#focus
+              option(selected value="Environment and Climate Change ") Environment & Climate Change 
+              option(value="Technology & Innovation") Technology & Innovation
+              option(value="WASH") WASH
+              option(value="Education") Education
+              option(value="Microcredit") Microcredit
+              option(value="Health & Wellbeing") Health & Wellbeing
+              option(value="Entrepreneurship") Entrepreneurship
+              option(value="Sports") Sports
+              option(value="History") History
+              option(value="Employment") Employment
+              option(value="Circular Economy") Circular Economy
+              option(value="Waste") Waste
+              option(value="Art, Culture & Music") Art, Culture & Music
+              option(value="People with Disabilities") People with Disabilities
+              option(value="Tourism") Tourism
+              option(value="Agriculture") Agriculture
+              option(value="Economics") Economics
+              option(value="Forestry") Forestry
+              option(value="Food & Nutrition") Food & Nutrition
+              option(value="Mother & Child") Mother & Child
+              option(value="Social Business") Social Business
+              option(value="Literature") Literature
+              option(value="Transportation") Transportation
+              option(value="Energy") Energy
+              option(value="Social Fiction") Social Fiction
+              option(value="Journalism") Journalism
 
           input.submit(type="submit" value="Submit")
