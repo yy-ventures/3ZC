@@ -5,9 +5,9 @@ block main
       article
         h1 3ZERO Club
         h2 Club Registration Form
-        p Prospective clubs should fill out the registration form below in order to become a registered 3ZERO Club. For questions, please contact connect@3zero.club
+        p#hint Prospective clubs should fill out the registration form below in order to become a registered 3ZERO Club. For questions, please contact connect@3zero.club
 
-        form#form_regsiter
+        form#form_register_club
           h3 Member Information
           .input_section
             p Email of Key Person
@@ -22,14 +22,19 @@ block main
             input(type="email" placeholder="Email of Member 3")
 
           h3 Club Information
+
           .input_section
             p Which of the three zeros attracts you the most?
-
             aside
-              input(type="checkbox" value="Zero net carbon emission ")
-              p Zero net carbon emission 
-              input(type="checkbox" value="Zero net carbon emission ")
-              p Zero net carbon emission 
+              .option
+                input#q1_a(type="checkbox" value="Zero net carbon emission ")
+                label(for="q1_a") Zero net carbon emission 
+              .option
+                input#q1_b(type="checkbox" value="Zero wealth concentration for ending poverty")
+                label(for="q1_b") Zero wealth concentration for ending poverty
+              .option
+                input#q1_c(type="checkbox" value="Zero unemployment by unleashing entrepreneurship in all")
+                label(for="q1_c") Zero unemployment by unleashing entrepreneurship in all
 
             p Club's Focus Area
             select#focus
@@ -59,5 +64,58 @@ block main
               option(value="Energy") Energy
               option(value="Social Fiction") Social Fiction
               option(value="Journalism") Journalism
+
+          article
+            p What is the spirit Behind your 3ZERO Club? (Please select at least three of the following spirit statements)
+            aside
+              .option
+                input#q2_a(type="checkbox")
+                label(for="q2_a") 3ZERO Clubs plant the seeds of 3 zeros in the minds of young people.
+              .option
+                input#q2_b(type="checkbox")
+                label(for="q2_b") Youth is power. But have you decided what you want to use it for?  
+              .option
+                input#q2_c(type="checkbox")
+                label(for="q2_c") Don’t wait. Get ready to grab the steering wheel of the planet now. 
+              .option
+                input#q2_d(type="checkbox")
+                label(for="q2_d") If you want to see the 3ZERO world in your lifetime, get started now. 
+              .option
+                input#q2_e(type="checkbox")
+                label(for="q2_e") Understanding the problems is halfway to solutions. 
+              .option
+                input#q2_f(type="checkbox")
+                label(for="q2_f") Explore together and get into action. 
+              .option
+                input#q2_g(type="checkbox")
+                label(for="q2_g") Youth is the power. But there is no battery pack to store this power. Either you use up every second of it, or say goodbye to it. 3ZERO Club invites you to use every second of your power by transforming it into social actions. Convert your power into results.  
+              .option
+                input#q2_h(type="checkbox")
+                label(for="q2_h") If you don’t use your power, it will be wasted away. 
+              .option
+                input#q2_i(type="checkbox")
+                label(for="q2_i") Grab the steering wheel of the planet now and take it to the destination of your choice. 
+              .option
+                input#q2_j(type="checkbox")
+                label(for="q2_j") Make 3ZERO your immediate destination. We have to get there as soon as we can. 
+              .option
+                input#q2_k(type="checkbox")
+                label(for="q2_k") Assess the present, decide the future, and go for it. 
+              .option
+                input#q2_l(type="checkbox")
+                label(for="q2_l") THINK, NETWORK, AND ACT 
+
+          h3 Club Location
+          .input_section
+            p Club's Address
+            textarea(placeholder="Club's Address" rows="2")
+            p Country
+            input(type="text" placeholder="Country")
+            p City
+            input(type="text" placeholder="City")
+            p State/Province
+            input(type="text" placeholder="State/Province")
+            p Postal/Zip Code
+            input(type="number" placeholder="Postal/Zip Code")
 
           input.submit(type="submit" value="Submit")
