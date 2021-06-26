@@ -1,4 +1,4 @@
-extends markups/layout
+extends ../markups/layout
 block main
   main#sign_up
     section.register
@@ -11,7 +11,7 @@ block main
           h3 Member Information
           .input_section
             p Email of Key Person
-            input(type="email" placeholder="Email of Key Person" name="email_kp" autofocus)
+            input(type="email" placeholder="Email of Key Person" name="email_kp")
             p Email of Deputy Key Person
             input(type="email" placeholder="Email of Deputy Key Person" name="email_dkp")
             p Email of Member 1

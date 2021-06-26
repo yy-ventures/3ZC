@@ -35,3 +35,35 @@ try {
 } catch {
   doms('nav .menu a:first-of-type')[0].classList.add('active_link')
 }
+
+const get_checked_values = (elements) => Object.values(elements).filter(box => box.checked).map(dom => dom.value)
+
+doms('#form_register_club')[0].onsubmit = async (event) => {
+  event.preventDefault()
+  const {
+    email_kp,
+    email_dkp,
+    email_m1,
+    email_m2,
+    email_m3,
+    zipcode,
+    address,
+    state
+  } = Object.fromEntries(new FormData(event.target))
+
+  const zeros = get_checked_values(event.target.elements['zeros'])
+
+  const focus_area = doms('#form_register_club #focus')[0].value
+  const country = doms('#form_register_club #country')[0].value
+
+  console.log(zeros)
+
+  // window.location.href = '/register';
+  // try{
+  //   const result = await auth.createUserWithEmailAndPassword(email, 'asdflkj')
+  //   console.log(result)
+  // }catch(error){
+  //   console.log(error)
+  // }
+
+}
