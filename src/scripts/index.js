@@ -40,10 +40,15 @@ try {
   doms('#form_register_club')[0].onsubmit = async (event) => {
     event.preventDefault()
     const {
+      name_kp,
       email_kp,
+      name_dkp,
       email_dkp,
+      name_m1,
       email_m1,
+      name_m2,
       email_m2,
+      name_m3,
       email_m3,
       zipcode,
       address,
@@ -55,24 +60,31 @@ try {
     const focus_area = doms('#form_register_club #focus')[0].value
     const country = doms('#form_register_club #country')[0].value
 
-    // db.collection('clubs').add({
-    //   email_key_person: email_kp,
-    //   email_deputy_key_person: email_dkp,
-    //   email_member_1: email_m1,
-    //   email_member_2: email_m2,
-    //   email_member_3: email_m3,
-    //   zipcode,
-    //   address,
-    //   state,
-    //   country,
-    //   attractive_zeros: zeros,
-    //   focus_area,
-    // })
-
-    db.collection('clubs').add({
+    await db.collection('clubs').add({
+      name_key_person: name_kp,
       email_key_person: email_kp,
+      name_deputy_key_person: name_dkp,
+      email_deputy_key_person: email_dkp,
+      name_member_1: name_m1,
+      email_member_1: email_m1,
+      name_member_2: name_m2,
+      email_member_2: email_m2,
+      name_member_3: name_m3,
+      email_member_3: email_m3,
+      zipcode,
+      address,
+      state,
+      country,
+      attractive_zeros: zeros,
+      focus_area,
     })
+
     console.log('done')
+
+    // const club_members_docs = await db.collection('members').where('club_id', '==', 'zrHIFHBJHvSz3V5jFjeh').get()
+    // club_members_docs.forEach(doc => {
+    //   console.log(doc.email)
+    // })
 
     // window.location.href = '/';
 

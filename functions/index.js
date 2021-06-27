@@ -1,17 +1,10 @@
 const functions = require("firebase-functions");
 const admin = require('firebase-admin')
-const sendgrid = require('@sendgrid/mail')
-
-const TEMPLATE_ID = 'd-dc24eadc636643f7854a9790fd0236c4'
-const API_KEY = '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'
-
-// Create and Deploy Your First Cloud Functions
-// https://firebase.google.com/docs/functions/write-firebase-functions
+const mailgun = require('mailgun-js');
 
 admin.initializeApp()
 const db = admin.firestore()
 
-sendgrid.setApiKey(API_KEY)
 
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //   functions.logger.info("Hello logs!", { structuredData: true });
@@ -21,29 +14,83 @@ sendgrid.setApiKey(API_KEY)
 exports.sign_up_club = functions.firestore.document('clubs/{id}')
   .onCreate(async (snap, context) => {
 
-    // const { email_key_person } = snap.data()
-    // const key_person = await db.collection('member').add({
-    //   email: email_key_person,
-    //   club_id: context.params.id,
-    //   profile_completed: false
-    // })
+    const {
+      email_key_person, name_key_person,
+      email_deputy_key_person, name_deputykey_person,
+      email_member_1, name_member_1,
+      email_member_2, name_member_2,
+      email_member_3, name_member_3,
+    } = snap.data()
 
-    //send email using id
-    // console.log(member.id)
+    const key_person = await db.collection('members').add({
+      email: email_key_person,
+      club_id: context.params.id,
+      role: 'key_person',
+      profile_completed: false
+    })
+    mailgun({ apiKey: 'ca5c81769102a5a418d0f574881f0ef5-6e0fd3a4-76989148', domain: 'mail.3zero.club' })
+      .messages()
+      .send(
+        {
+          from: '3ZERO Club <connect@yy.ventures>',
+          to: email_key_person,
+          subject: "3ZERO Club Registration: Complete your profile",
+          template: 'welcome_3zc',
+          'v:name': name_key_person,
+          'v:email': email_key_person,
+          'v:link': `https://3zero.club/member-information?id=${key_person.id}`
+        },
+        (error, body) => {
+          console.log(body);
+        }
+      );
 
-    // const sendgrid_options = {
-    //   to: 'salman104alvi@gmail.com',
-    //   from: 'connect@3zero.club',
-    //   templateId: TEMPLATE_ID
-    // };
+    const deputy_key_person = await db.collection('members').add({
+      email: email_deputy_key_person,
+      club_id: context.params.id,
+      role: 'deputy_key_person',
+      profile_completed: false
+    })
+    mailgun({ apiKey: 'ca5c81769102a5a418d0f574881f0ef5-6e0fd3a4-76989148', domain: 'mail.3zero.club' })
+      .messages()
+      .send(
+        {
+          from: '3ZERO Club <connect@yy.ventures>',
+          to: email_deputy_key_person,
+          subject: "3ZERO Club Registration: Complete your profile",
+          template: 'welcome_3zc',
+          'v:name': name_deputy_key_person,
+          'v:email': email_deputy_key_person,
+          'v:link': `https://3zero.club/member-information?id=${deputy_key_person.id}`
+        },
+        (error, body) => {
+          console.log(body);
+        }
+      );
 
-    // try {
-    //   await sendgrid.send(sendgrid_options);
-    // } catch (error) {
-    //   //
-    // }
+    const member_1 = await db.collection('members').add({
+      email: email_member_1,
+      club_id: context.params.id,
+      role: 'member',
+      profile_completed: false
+    })
+    mailgun({ apiKey: 'ca5c81769102a5a418d0f574881f0ef5-6e0fd3a4-76989148', domain: 'mail.3zero.club' })
+      .messages()
+      .send(
+        {
+          from: '3ZERO Club <connect@yy.ventures>',
+          to: email_member_1,
+          subject: "3ZERO Club Registration: Complete your profile",
+          template: 'welcome_3zc',
+          'v:name': name_member_1,
+          'v:email': email_member_1,
+          'v:link': `https://3zero.club/member-information?id=${member_1.id}`
+        },
+        (error, body) => {
+          console.log(body);
+        }
+      );
 
-    console.log('yo')
 
   })
 

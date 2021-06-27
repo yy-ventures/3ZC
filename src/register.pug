@@ -5,19 +5,34 @@ block main
       article
         h1 3ZERO Club
         h2 Club Registration Form
-        p#hint Prospective member should fill out this registration form for becoming a registered 3ZERO Club member. For questions, please contact connect@3zero.club
+        p#hint Complete the following registration form to register your 3ZERO Club.#[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same name and email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
 
         form#form_register_club
           h3 Member Information
           .input_section
+
+            p Name of Key Person
+            input(type="text" placeholder="Name of Key Person" name="name_kp")
             p Email of Key Person
             input(type="email" placeholder="Email of Key Person" name="email_kp")
+
+            p Name of Deputy Key Person
+            input(type="text" placeholder="Name of Deputy Key Person" name="name_dkp")
             p Email of Deputy Key Person
             input(type="email" placeholder="Email of Deputy Key Person" name="email_dkp")
+
+            p Name of Member 1
+            input(type="text" placeholder="Name of Member 1" name="name_m1")
             p Email of Member 1
             input(type="email" placeholder="Email of Member 1" name="email_m1")
+
+            p Name of Member 2
+            input(type="text" placeholder="Name of Member 2" name="name_m2")
             p Email of Member 2
             input(type="email" placeholder="Email of Member 2" name="email_m2")
+
+            p Name of Member 3
+            input(type="text" placeholder="Name of Member 3" name="name_m3")
             p Email of Member 3
             input(type="email" placeholder="Email of Member 3" name="email_m3")
 
@@ -107,6 +122,18 @@ block main
 
           h3 Club Location
           .input_section
+
+            p Club's Address
+            textarea(placeholder="Club's Address" rows="2" name="address")
+
+
+            p City
+            input(type="text" placeholder="City" name="city")
+            p State/Province
+            input(type="text" placeholder="State/Province" name="state")
+            p Postal/Zip Code
+            input(type="text" placeholder="Postal/Zip Code" name="zipcode")
+
             p Country
             select#country
               option(selected value="Afghanistan") Afghanistan
@@ -304,14 +331,5 @@ block main
               option(value="Yemen") Yemen
               option(value="Zambia") Zambia
               option(value="Zimbabwe") Zimbabwe
-
-            p City
-            input(type="text" placeholder="City" name="city")
-            p State/Province
-            input(type="text" placeholder="State/Province" name="state")
-            p Postal/Zip Code
-            input(type="text" placeholder="Postal/Zip Code" name="zipcode")
-            p Club's Address
-            textarea(placeholder="Club's Address" rows="2" name="address")
 
           input.submit(type="submit" value="Submit")
