@@ -1,0 +1,63 @@
+extends markups/layout
+block main
+  main#sign_up
+    section.register
+      article
+        h1 3ZERO Club
+        h2 Member Registration Form
+        p#hint You need to #[strong use the same name and email address] that was used during your 3ZERO Club registration.#[br]You should complete their profile below in order to register their 3ZERO Club. For questions, please contact at connect@3zero.club.
+
+        form#form_register_member
+          h3 Member Information
+          .input_section
+            p First Name
+            input(type="text" placeholder="First Name" name="name_first")
+            p Last Name
+            input(type="text" placeholder="Last Name" name="name_last")
+
+            p Gender
+            select#gender
+              option(selected value="Male") Male
+              option(value="Female") Female
+              option(value="Others") Others
+              option(value="Prefer not to answer") Prefer not to answer
+
+            p Date of Birth
+            input(type="date" name="date_of_birth" placeholder="Date of Birth")
+            p Contact Number
+            input(type="tel" name="contact" placeholder="Contact Number")
+
+            p What is your level of education?
+            select#education
+              option(selected value="psc") P.S.C.
+              option(value="jsc") J.S.C.
+              option(value="ssc") S.S.C.
+              option(value="hsc") H.S.C.
+              option(value="hsc") Bachelors
+              option(value="hsc") Masters
+              option(value="hsc") PhD
+              option(value="hsc") Diploma
+              option(value="hsc") Didn't attend school
+
+            p What is your profession?
+            input(type="text" name="profession" placeholder="Profession")
+
+            p Name of your organization
+            input(type="text" name="organization" placeholder="Organization")
+
+            p Your position in your organization
+            input(type="text" name="position" placeholder="Position")
+
+            //- p Which of the three zeros attracts you the most?
+            //- aside
+            //-   label
+            //-     input(type="checkbox" value="Zero net carbon emission" name="zeros")
+            //-     | Zero net carbon emission 
+            //-   label
+            //-     input(type="checkbox" value="Zero wealth concentration for ending poverty" name="zeros")
+            //-     | Zero wealth concentration for ending poverty
+            //-   label
+            //-     input(type="checkbox" value="Zero unemployment by unleashing entrepreneurship in all" name="zeros")
+            //-     | Zero unemployment by unleashing entrepreneurship in all
+
+          input.submit(type="submit" value="Submit")

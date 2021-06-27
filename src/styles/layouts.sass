@@ -394,11 +394,13 @@ textarea
   p:nth-last-child(3)
     margin-top: 1em
 
-#form_contact input:first-child
-  display: block
-  width: 100%
-  &:focus
-    outline: none
+#form_contact
+  input,
+  textarea
+    display: block
+    width: 100%
+    &:focus
+      outline: none
 
 // events{{{
 #events
@@ -511,4 +513,14 @@ textarea
     p,
     a
       display: inline-block
+
+  #affiliating
+    place-items: center
+
+    h3
+      margin: 0.5em 0
+
+    p + p
+      margin-top: 1.5em
+
 // }}}

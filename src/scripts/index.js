@@ -70,8 +70,9 @@ try {
     // })
 
     db.collection('clubs').add({
-      address,
+      email_key_person: email_kp,
     })
+    console.log('done')
 
     // window.location.href = '/';
 
@@ -82,6 +83,26 @@ try {
     //   console.log(error)
     // }
 
+  }
+
+
+} catch (error) {
+  //
+}
+
+try {
+  doms('#form_register_member')[0].onsubmit = async (event) => {
+    event.preventDefault()
+    const {
+      email,
+    } = Object.fromEntries(new FormData(event.target))
+    const id = new URL(window.location.href).searchParams.get("id")
+
+    await db.collection('member').doc(id).update({
+      profile_completed: true,
+    })
+
+    console.log('done')
   }
 } catch (error) {
   //

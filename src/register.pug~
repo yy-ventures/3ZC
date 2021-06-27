@@ -69,6 +69,11 @@ block main
               option(value="jsc") J.S.C.
               option(value="ssc") S.S.C.
               option(value="hsc") H.S.C.
+              option(value="hsc") Bachelors
+              option(value="hsc") Masters
+              option(value="hsc") PhD
+              option(value="hsc") Diploma
+              option(value="hsc") Didn't attend school
 
             p What is your profession?
             input(type="text" name="profession" placeholder="Profession")
