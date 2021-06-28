@@ -39,7 +39,6 @@ a
 [type="email"],
 [type="tel"],
 [type="passowrd"],
-input[type="text"],
 input:not([type]),
 [type="date"],
 select,
@@ -48,6 +47,9 @@ textarea
   // width: 100%
   &:focus
     outline: none
+
+input:not([type])
+  width: 100%
 
 label
   display: block
