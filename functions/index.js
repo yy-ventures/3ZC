@@ -35,7 +35,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
           to: email_key_person,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
-          'v:name': name_key_person,
+          // 'v:name': name_key_person,
           'v:email': email_key_person,
           'v:link': `https://3zero.club/member-information?id=${key_person.id}`
         },
@@ -58,7 +58,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
           to: email_deputy_key_person,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
-          'v:name': name_deputy_key_person,
+          // 'v:name': name_deputy_key_person,
           'v:email': email_deputy_key_person,
           'v:link': `https://3zero.club/member-information?id=${deputy_key_person.id}`
         },
@@ -81,7 +81,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
           to: email_member_1,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
-          'v:name': name_member_1,
+          // 'v:name': name_member_1,
           'v:email': email_member_1,
           'v:link': `https://3zero.club/member-information?id=${member_1.id}`
         },
@@ -104,7 +104,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
           to: email_member_2,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
-          'v:name': name_member_2,
+          // 'v:name': name_member_2,
           'v:email': email_member_2,
           'v:link': `https://3zero.club/member-information?id=${member_2.id}`
         },
@@ -127,7 +127,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
           to: email_member_3,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
-          'v:name': name_member_3,
+          // 'v:name': name_member_3,
           'v:email': email_member_3,
           'v:link': `https://3zero.club/member-information?id=${member_3.id}`
         },
