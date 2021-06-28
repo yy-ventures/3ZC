@@ -5,16 +5,16 @@ block main
       article
         h1 3ZERO Club
         h2 Club Registration Form
-        p#hint Complete the following registration form to register your 3ZERO Club.#[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same name and email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
+        p#hint Complete the following registration form to register your 3ZERO Club.#[br] #[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same name and email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
 
         form#form_register_club
           h3 Member Information
           .input_section
 
             p Name of Key Person
-            input(type="text" placeholder="Name of Key Person" name="name_kp")
+            input(type="text" placeholder="Name of Key Person" name="name_kp" required)
             p Email of Key Person
-            input(type="email" placeholder="Email of Key Person" name="email_kp")
+            input(type="email" placeholder="Email of Key Person" name="email_kp" required)
 
             p Name of Deputy Key Person
             input(type="text" placeholder="Name of Deputy Key Person" name="name_dkp")
@@ -332,19 +332,19 @@ block main
               option(value="Zimbabwe") Zimbabwe
 
           article
-            p Declerations
+            h3 Declerations
             aside
               label
-                input(type="checkbox" value="We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions." name="declaration")
+                input(type="checkbox" value="We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions." name="declarations")
                 | We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions.
               label
-                input(type="checkbox" value="We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook." name="declaration")
+                input(type="checkbox" value="We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook." name="declarations")
                 | We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook.
               label
-                input(type="checkbox" value="We would like to inform our Club’s yearly activities to the 3Z Global Centre." name="declaration")
+                input(type="checkbox" value="We would like to inform our Club’s yearly activities to the 3Z Global Centre." name="declarations")
                 | We would like to inform our Club’s yearly activities to the 3Z Global Centre.
               label
-                input(type="checkbox" value="We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre." name="declaration")
+                input(type="checkbox" value="We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre." name="declarations")
                 | We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre.
           input.submit(type="submit" value="Submit")
           p#confirm The form was successfully submitted. Redirecting you to Home.

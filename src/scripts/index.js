@@ -51,6 +51,7 @@ try {
       name_m3,
       email_m3,
       zipcode,
+      declerations,
       address,
       state
     } = Object.fromEntries(new FormData(event.target))
@@ -78,6 +79,7 @@ try {
       state,
       country,
       attractive_zeros: zeros,
+      declerations,
       focus_area,
     })
 
