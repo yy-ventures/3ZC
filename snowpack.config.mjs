@@ -27,16 +27,19 @@ export default {
     ['@snowpack/plugin-webpack',
       {
       }
-    ]
+    ],
 
-    // ['@snowpack/plugin-postcss',
-    //   {
-    //   }
-    // ],
+    ['@snowpack/plugin-postcss',
+      {
+        input: ['.sass', '.css']
+      }
+    ],
 
   ],
   devOptions: {
     port: 1234,
+    bundle: false,
+    out: "dist",
     open: "none"
   },
   buildOptions: {
