@@ -7,14 +7,15 @@ firebase.initializeApp({
   appId: "1:777429204977:web:0d79f1fbeaff747a884e50",
   measurementId: "G-1ZTS4B7X4H",
 });
+firebase.analytics();
 
 const auth = firebase.auth();
 const db = firebase.firestore();
 
 const sign_in_google = async () => {
-  try{
+  try {
     auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-  }catch (error){
+  } catch (error) {
     console.log(erro)
   }
 }
