@@ -31,7 +31,7 @@ export default {
 
     ['@snowpack/plugin-postcss',
       {
-        input: ['.sass', '.css']
+        // input: ['.sass', '.css']
       }
     ],
 
