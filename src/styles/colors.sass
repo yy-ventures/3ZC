@@ -157,15 +157,20 @@ input[type="submit"]
   color: $fg_light_title
   border: none
 
+  &:hover
+    background: darken($orange, 10%)
+  &:active
+    background: lighten($orange, 10%)
+
 #sign_up
   background: $light_teal
   section
     background: $bg_light
 
-    .submit
-      color: $fg_light_title
-      background: $orange
-      border: none
+    // .submit
+    //   color: $fg_light_title
+    //   background: $orange
+    //   border: none
 
     a
       color: $orange
