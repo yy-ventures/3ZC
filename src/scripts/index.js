@@ -91,7 +91,6 @@ try {
 
   }
 } catch (error) {
-  console.log(error)
 }
 
 try {
@@ -112,26 +111,25 @@ try {
     const gender = doms('#form_register_member #gender')[0].value
     const education = doms('#form_register_member #education')[0].value
 
-    // await db.collection('members').doc(id).update({
-    //   name_first,
-    //   name_last,
-    //   email,
-    //   date_of_birth,
-    //   profession,
-    //   organization,
-    //   contact,
-    //   position,
-    //   profile_completed: true,
-    //   gender,
-    //   education
-    // })
+    await db.collection('members').doc(id).update({
+      name_first,
+      name_last,
+      email,
+      date_of_birth,
+      profession,
+      organization,
+      contact,
+      position,
+      profile_completed: true,
+      gender,
+      education
+    })
 
     doms('#confirm')[0].style.display = 'block'
     await sleep(3000)
     window.location.href = '/';
   }
 } catch (error) {
-  console.log(error)
 }
 
     // const club_members_docs = await db.collection('members').where('club_id', '==', 'zrHIFHBJHvSz3V5jFjeh').get()

@@ -11,9 +11,11 @@ block main
           h3 Member Information
           .input_section
             p First Name
-            input(type="text" placeholder="First Name" name="name_first")
+            input(type="text" placeholder="First Name" name="name_first" required)
             p Last Name
-            input(type="text" placeholder="Last Name" name="name_last")
+            input(type="text" placeholder="Last Name" name="name_last" required)
+            p Email
+            input(type="email" placeholder="Email" name="email" required)
 
             p Gender
             select#gender
@@ -23,9 +25,9 @@ block main
               option(value="Prefer not to answer") Prefer not to answer
 
             p Date of Birth
-            input(type="date" name="date_of_birth" placeholder="Date of Birth")
+            input(type="date" name="date_of_birth" placeholder="Date of Birth" required)
             p Contact Number
-            input(type="tel" name="contact" placeholder="Contact Number")
+            input(type="tel" name="contact" placeholder="Contact Number" required)
 
             p What is your level of education?
             select#education
@@ -40,13 +42,13 @@ block main
               option(value="hsc") Didn't attend school
 
             p What is your profession?
-            input(type="text" name="profession" placeholder="Profession")
+            input(type="text" name="profession" placeholder="Profession" required)
 
             p Name of your organization
-            input(type="text" name="organization" placeholder="Organization")
+            input(type="text" name="organization" placeholder="Organization" required)
 
             p Your position in your organization
-            input(type="text" name="position" placeholder="Position")
+            input(type="text" name="position" placeholder="Position" required)
 
             //- p Which of the three zeros attracts you the most?
             //- aside
