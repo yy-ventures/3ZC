@@ -39,6 +39,7 @@ try {
 try {
   doms('#form_register_club')[0].onsubmit = async (event) => {
     event.preventDefault()
+
     const {
       name_kp,
       email_kp,
@@ -51,13 +52,13 @@ try {
       name_m3,
       email_m3,
       zipcode,
-      declerations,
       address,
       state
     } = Object.fromEntries(new FormData(event.target))
 
     const zeros = get_checked_values(event.target.elements['zeros'])
     const spirit = get_checked_values(event.target.elements['spirit'])
+    const declerations = get_checked_values(event.target.elements['declerations'])
 
     const focus_area = doms('#form_register_club #focus')[0].value
     const country = doms('#form_register_club #country')[0].value
@@ -78,26 +79,18 @@ try {
       address,
       state,
       country,
-      attractive_zeros: zeros,
       declerations,
+      attractive_zeros: zeros,
       focus_area,
     })
 
-    // const club_members_docs = await db.collection('members').where('club_id', '==', 'zrHIFHBJHvSz3V5jFjeh').get()
-    // club_members_docs.forEach(doc => {
-    //   console.log(doc.email)
-    // })
-
-    // console.log('done')
-
     doms('#confirm')[0].style.display = 'block'
+    await sleep(3000)
     window.location.href = '/';
 
   }
-
-
 } catch (error) {
-  //
+  console.log(error)
 }
 
 try {
@@ -141,3 +134,7 @@ try {
   //
 }
 
+    // const club_members_docs = await db.collection('members').where('club_id', '==', 'zrHIFHBJHvSz3V5jFjeh').get()
+    // club_members_docs.forEach(doc => {
+    //   console.log(doc.email)
+    // })

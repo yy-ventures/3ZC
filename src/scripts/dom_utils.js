@@ -96,3 +96,4 @@ const update_scroll = () => {
 /*}}}*/
 
 const get_checked_values = (elements) => Object.values(elements).filter(box => box.checked).map(dom => dom.value)
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

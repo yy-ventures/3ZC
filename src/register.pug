@@ -5,7 +5,7 @@ block main
       article
         h1 3ZERO Club
         h2 Club Registration Form
-        p#hint Complete the following registration form to register your 3ZERO Club.#[br] #[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same name and email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
+        p#hint Complete the following registration form to register your 3ZERO Club.#[br] #[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
 
         form#form_register_club
           h3 Member Information
@@ -17,24 +17,24 @@ block main
             input(type="email" placeholder="Email of Key Person" name="email_kp" required)
 
             p Name of Deputy Key Person
-            input(type="text" placeholder="Name of Deputy Key Person" name="name_dkp")
+            input(type="text" placeholder="Name of Deputy Key Person" name="name_dkp" required)
             p Email of Deputy Key Person
-            input(type="email" placeholder="Email of Deputy Key Person" name="email_dkp")
+            input(type="email" placeholder="Email of Deputy Key Person" name="email_dkp" required)
 
             p Name of Member 1
-            input(type="text" placeholder="Name of Member 1" name="name_m1")
+            input(type="text" placeholder="Name of Member 1" name="name_m1" required)
             p Email of Member 1
-            input(type="email" placeholder="Email of Member 1" name="email_m1")
+            input(type="email" placeholder="Email of Member 1" name="email_m1" required)
 
             p Name of Member 2
-            input(type="text" placeholder="Name of Member 2" name="name_m2")
+            input(type="text" placeholder="Name of Member 2" name="name_m2" required)
             p Email of Member 2
-            input(type="email" placeholder="Email of Member 2" name="email_m2")
+            input(type="email" placeholder="Email of Member 2" name="email_m2" required)
 
             p Name of Member 3
-            input(type="text" placeholder="Name of Member 3" name="name_m3")
+            input(type="text" placeholder="Name of Member 3" name="name_m3" required)
             p Email of Member 3
-            input(type="email" placeholder="Email of Member 3" name="email_m3")
+            input(type="email" placeholder="Email of Member 3" name="email_m3" required)
 
           h3 Club Information
 
@@ -123,15 +123,14 @@ block main
           .input_section
 
             p Club's Address
-            textarea(placeholder="Club's Address" rows="2" name="address")
-
+            textarea(placeholder="Club's Address" rows="2" name="address" required)
 
             p City
-            input(type="text" placeholder="City" name="city")
+            input(type="text" placeholder="City" name="city" required)
             p State/Province
-            input(type="text" placeholder="State/Province" name="state")
+            input(type="text" placeholder="State/Province" name="state" required)
             p Postal/Zip Code
-            input(type="text" placeholder="Postal/Zip Code" name="zipcode")
+            input(type="text" placeholder="Postal/Zip Code" name="zipcode" required)
 
             p Country
             select#country
@@ -335,16 +334,16 @@ block main
             h3 Declerations
             aside
               label
-                input(type="checkbox" value="We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions." name="declarations")
+                input(type="checkbox" value="We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions." name="declerations")
                 | We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions.
               label
-                input(type="checkbox" value="We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook." name="declarations")
+                input(type="checkbox" value="We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook." name="declerations")
                 | We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook.
               label
-                input(type="checkbox" value="We would like to inform our Club’s yearly activities to the 3Z Global Centre." name="declarations")
+                input(type="checkbox" value="We would like to inform our Club’s yearly activities to the 3Z Global Centre." name="declerations")
                 | We would like to inform our Club’s yearly activities to the 3Z Global Centre.
               label
-                input(type="checkbox" value="We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre." name="declarations")
+                input(type="checkbox" value="We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre." name="declerations")
                 | We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre.
           input.submit(type="submit" value="Submit")
           p#confirm The form was successfully submitted. Redirecting you to Home.
