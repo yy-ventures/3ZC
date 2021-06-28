@@ -138,7 +138,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
 
   })
 
-exports.sign_up_member = functions.firestore.document('member/{id}')
+exports.sign_up_member = functions.firestore.document('members/{id}')
   .onUpdate(async (snap, context) => {
 
     const { email, name_first, name_last } = snap.after.data()
