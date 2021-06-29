@@ -26,26 +26,36 @@ block main
               input(type="email" placeholder="Email of Deputy Key Person" name="email_dkp" required)
 
             article
-              p Name of Member 1
-              input.wide( placeholder="Name of Member 1" name="name_m1" required)
+              p Name of the youngest member  other than the first two members
+              input.wide( placeholder="Name of the youngest member  other than the first two members" name="name_y1" required)
             article
-              p Email of Member 1
-              input(type="email" placeholder="Email of Member 1" name="email_m1" required)
+              p Email of the youngest member  other than the first two members
+              input(type="email" placeholder="Email of the youngest member  other than the first two members" name="email_y1" required)
 
             article
-              p Name of Member 2
-              input.wide(placeholder="Name of Member 2" name="name_m2" required)
+              p Name of the youngest member between the remaining two members
+              input.wide(placeholder="Name of the youngest member between the remaining two members" name="name_y2" required)
             article
-              p Email of Member 2
-              input(type="email" placeholder="Email of Member 2" name="email_m2" required)
+              p Email of the youngest member between the remaining two members
+              input(type="email" placeholder="Email of the youngest member between the remaining two members" name="email_y2" required)
 
             article
-              p Name of Member 3
-              input.wide(placeholder="Name of Member 3" name="name_m3" required)
+              p Name of the remaining member
+              input.wide(placeholder="Name of the remaining member" name="name_y3" required)
             article
-              p Email of Member 3
-              input(type="email" placeholder="Email of Member 3" name="email_m3" required)
+              p Email of the remaining member
+              input(type="email" placeholder="Email of the remaining member" name="email_y3" required)
 
+            p Age of the oldest member  of the Club
+            input(type="number" placeholder="Age of the oldest member  of the Club" name="age_oldest" required)
+
+            p Age of the youngest member  of the Club
+            input(type="number" placeholder="Age of the youngest member  of the Club" name="age_youngest" required)
+
+            p Difference of age between the youngest and oldest members
+            input(type="number" placeholder="Difference of age between the youngest and oldest members" name="age_difference" required)
+
+          p#hint #[strong Attention:] If the difference between oldest and the youngest member shown above is more than 7 years, please replace one member to bring the age difference under 7 years.
           h3 Club Information
 
           .input_section

@@ -5,10 +5,24 @@ const mailgun = require('mailgun-js');
 admin.initializeApp()
 const db = admin.firestore()
 
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", { structuredData: true });
-//   response.send("Hello from Firebase!");
-// });
+exports.send_email = functions.https.onRequest(async (req, res) => {
+  const { to, from, subject, body } = req.body
+
+    mailgun({ apiKey: 'ca5c81769102a5a418d0f574881f0ef5-6e0fd3a4-76989148', domain: 'mail.3zero.club' })
+      .messages()
+      .send(
+        {
+          from: '3ZERO Club <noreply@3zero.club>',
+          to: 'salmanabedin@disroot.org',
+          subject: "Hello",
+        },
+        (error, body) => {
+          res.json({ error: body });
+        }
+      );
+
+    res.json({ message: 'Hello World'});
+});
 
 exports.sign_up_club = functions.firestore.document('clubs/{id}')
   .onCreate(async (snap, context) => {
@@ -16,9 +30,9 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
     const {
       email_key_person, name_key_person,
       email_deputy_key_person, name_deputy_key_person,
-      email_member_1, name_member_1,
-      email_member_2, name_member_2,
-      email_member_3, name_member_3,
+      email_y1,
+      email_y2,
+      email_y3,
     } = snap.data()
 
     const key_person = await db.collection('members').add({
@@ -68,7 +82,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
       );
 
     const member_1 = await db.collection('members').add({
-      email: email_member_1,
+      email: email_y1,
       club_id: context.params.id,
       role: 'member',
       profile_completed: false
@@ -78,11 +92,11 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
       .send(
         {
           from: '3ZERO Club <noreply@3zero.club>',
-          to: email_member_1,
+          to: email_y1,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
           // 'v:name': name_member_1,
-          'v:email': email_member_1,
+          'v:email': email_y1,
           'v:link': `https://3zero.club/member-information?id=${member_1.id}`
         },
         (error, body) => {
@@ -91,7 +105,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
       );
 
     const member_2 = await db.collection('members').add({
-      email: email_member_2,
+      email: email_y2,
       club_id: context.params.id,
       role: 'member',
       profile_completed: false
@@ -101,11 +115,11 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
       .send(
         {
           from: '3ZERO Club <noreply@3zero.club>',
-          to: email_member_2,
+          to: email_y2,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
           // 'v:name': name_member_2,
-          'v:email': email_member_2,
+          'v:email': email_y2,
           'v:link': `https://3zero.club/member-information?id=${member_2.id}`
         },
         (error, body) => {
@@ -114,7 +128,7 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
       );
 
     const member_3 = await db.collection('members').add({
-      email: email_member_3,
+      email: email_y3,
       club_id: context.params.id,
       role: 'member',
       profile_completed: false
@@ -124,11 +138,11 @@ exports.sign_up_club = functions.firestore.document('clubs/{id}')
       .send(
         {
           from: '3ZERO Club <noreply@3zero.club>',
-          to: email_member_3,
+          to: email_y3,
           subject: "3ZERO Club Registration: Complete your profile",
           template: 'welcome_3zc',
           // 'v:name': name_member_3,
-          'v:email': email_member_3,
+          'v:email': email_y3,
           'v:link': `https://3zero.club/member-information?id=${member_3.id}`
         },
         (error, body) => {
