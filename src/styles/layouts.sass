@@ -554,3 +554,50 @@ form
     margin-top: 2.5em
     text-align: center
     // display: none
+
+  .field
+    position: relative
+    padding-top: 1em
+
+    & + *
+      margin-top: 0.5em
+
+    // input,
+    // textarea
+    //   padding: 0 !important
+
+    p
+      z-index: -1
+      position: absolute
+      transition: transform 0.25s
+      // bottom: 0
+      transform-origin: 0%
+      transform: translateY(-2em)
+
+    textarea + p
+      top: 0
+      transform: translateY(2.5em)
+
+    &:focus-within p,
+    input:not(:placeholder-shown) + p
+      transform: scale(0.8) translateY(-5em)
+
+    &:focus-within textarea + p,
+    textarea:not(:placeholder-shown) + p
+      transform: scale(0.8) translateY(1em)
+
+    &:after
+      content: ''
+      position: relative
+      display: block
+      height: 0.10em
+      transform: scaleX(0)
+      transition: transform 500ms ease
+      transform-origin: 0%
+
+    &:focus-within:after
+      transform: scaleX(1)
+
+    input:focus-within,
+    textarea:focus-within
+      border-color: transparent
