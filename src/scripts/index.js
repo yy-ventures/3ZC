@@ -137,8 +137,33 @@ try {
   }
 } catch (error) {
 }
-
     // const club_members_docs = await db.collection('members').where('club_id', '==', 'zrHIFHBJHvSz3V5jFjeh').get()
     // club_members_docs.forEach(doc => {
     //   console.log(doc.email)
     // })
+try {
+  doms('#form_contact')[0].onsubmit = async (event) => {
+    event.preventDefault()
+
+    const {
+      name,
+      email,
+      message
+    } = Object.fromEntries(new FormData(event.target))
+
+    // await api_post('http://localhost:5001/three-zero-club/us-central1/send_email', {
+    await api_post('https://us-central1-three-zero-club.cloudfunctions.net/send_email', {
+      name,
+      from: email,
+      to: 'connect@3zero.club',
+      subject: 'Message to 3ZERO Club',
+      text: message
+    })
+
+    doms('#form_contact .confirm')[0].style.display = 'block'
+    await sleep(3000)
+    window.location.href = '/';
+
+  }
+} catch (error) {
+}

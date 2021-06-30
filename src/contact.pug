@@ -14,10 +14,11 @@ block main
       article#contact
         h2 Write to Us
         form#form_contact
-          input(type="text" name="first_name" placeholder="Full Name")
-          input(type="email" name="first_name" placeholder="Email Address")
-          textarea(placeholder="Message" rows='5')
+          input(type="text" name="name" placeholder="Full Name")
+          input(type="email" name="email" placeholder="Email Address")
+          textarea(name="message" placeholder="Message" rows='5')
           input(type="submit" value="Send Message")
+          p.confirm Your message was sent. Redirecting you to Home.
 
       //- article.moved_right
       article
