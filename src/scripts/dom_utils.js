@@ -97,3 +97,21 @@ const update_scroll = () => {
 
 const get_checked_values = (elements) => Object.values(elements).filter(box => box.checked).map(dom => dom.value)
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const submitter = (form_id, action) => {
+  try {
+    doms(form_id)[0].onsubmit = async (event) => {
+      event.preventDefault()
+      doms('input[type="submit"]')[0].setAttribute('disabled', 'disabled')
+      doms('input[type="submit"]')[0].value = 'Submitting...'
+
+      action()
+
+      doms('input[type="submit"]')[0].value = 'Submitted'
+      doms(`${form_id} .confirm`)[0].style.opacity = '1'
+      await sleep(3000)
+      window.location.href = '/';
+    }
+  } catch (error) {
+  }
+}
