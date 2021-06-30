@@ -38,8 +38,9 @@ try {
 
 try {
   doms('#form_register_club')[0].onsubmit = async (event) => {
-
     event.preventDefault()
+    doms('input[type="submit"]')[0].setAttribute('disabled', 'disabled')
+    doms('input[type="submit"]')[0].value = 'Submitting...'
 
     const {
       name_kp,
@@ -91,6 +92,7 @@ try {
       focus_area,
     })
 
+    doms('input[type="submit"]')[0].value = 'Submitted'
     doms('#confirm')[0].style.display = 'block'
     await sleep(3000)
     window.location.href = '/';
@@ -102,6 +104,9 @@ try {
 try {
   doms('#form_register_member')[0].onsubmit = async (event) => {
     event.preventDefault()
+    doms('input[type="submit"]')[0].setAttribute('disabled', 'disabled')
+    doms('input[type="submit"]')[0].value = 'Submitting...'
+
     const {
       name_first,
       name_last,
@@ -131,6 +136,7 @@ try {
       education
     })
 
+    doms('input[type="submit"]')[0].value = 'Submitted'
     doms('#confirm')[0].style.display = 'block'
     await sleep(3000)
     window.location.href = '/';
@@ -144,6 +150,8 @@ try {
 try {
   doms('#form_contact')[0].onsubmit = async (event) => {
     event.preventDefault()
+    doms('input[type="submit"]')[0].setAttribute('disabled', 'disabled')
+    doms('input[type="submit"]')[0].value = 'Submitting...'
 
     const {
       name,
@@ -151,7 +159,6 @@ try {
       message
     } = Object.fromEntries(new FormData(event.target))
 
-    // await api_post('http://localhost:5001/three-zero-club/us-central1/send_email', {
     await api_post('https://us-central1-three-zero-club.cloudfunctions.net/send_email', {
       name,
       from: email,
@@ -160,10 +167,10 @@ try {
       text: message
     })
 
+    doms('input[type="submit"]')[0].value = 'Submitted'
     doms('#form_contact .confirm')[0].style.display = 'block'
     await sleep(3000)
     window.location.href = '/';
-
   }
 } catch (error) {
 }
