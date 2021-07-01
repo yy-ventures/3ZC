@@ -49,6 +49,8 @@ a
 
   a
     text-decoration: underline
+    &:hover
+      color: $orange
 
   i
     color: $teal
@@ -75,10 +77,18 @@ a
       display: inline-block
       transform: rotate(-45deg)
       border: solid $teal
-      border-width: 0 2.5px 2.5px 0
-      padding: 2.5px
+      border-width: 0 0.15em 0.15em 0
+      padding: 0.20em
       margin-left: 0.5em
-      margin-bottom: 0.10em
+
+    &:hover
+      background: $teal
+      color: $fg_light_title
+      box-shadow: 0 0 0.20em 0 black
+      &:after
+        border: solid $fg_light_title
+        border-width: 0 0.15em 0.15em 0
+
 
 #registration
   article
@@ -123,6 +133,8 @@ a
   a
     color: $orange
     font-weight: bold
+    &:hover
+      color: lighten($orange, 10%)
 
 
 .shadow
@@ -192,8 +204,12 @@ input[type="submit"]
         background: #0183bf
 
 .orange_button
-  background: $orange
   color: $fg_light_title
+
+  background: $orange
+  &:hover
+    background: darken($orange, 10%)
+    box-shadow: 0 0 0.20em 0 black
 
 #Layer_1
   .cls-1,
@@ -231,7 +247,7 @@ input[type="submit"]
   &:after
     content: ""
     display: block
-    height: 3px
+    height: 0.15em
     transform: scaleX(0)
     background: $orange
 

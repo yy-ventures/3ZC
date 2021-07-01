@@ -483,7 +483,7 @@ textarea
         grid-template-columns: repeat(5, auto)
 
       overflow: hidden
-      max-height: 0
+      max-height: 600px
       transition: max-height 0.5s
 
       p
@@ -500,11 +500,14 @@ textarea
       display: flex
       justify-content: space-between
 
+      .arrow
+        transform: rotate(90deg)
+
     #toggler_accordion:checked
       ~ .grid
-        max-height: 600px
+        max-height: 0
       ~ label .arrow:after
-        transform: rotate(45deg)
+        transform: rotate(-135deg)
 
   #activities,
   #support
