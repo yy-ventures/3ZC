@@ -7,7 +7,12 @@ nav
   justify-content: space-between
   align-items: center
 
-  position: sticky
+  position: fixed
+  width: 100%
+  @media (min-width: 601px)
+    position: sticky
+    
+
   top: 0
   z-index: 99
 
@@ -26,18 +31,28 @@ nav
       
 
   .menu
-    display: none
+    overflow: hidden
+    transition: max-height 500ms
+    text-align: center
+
+    max-height: 0
+    @media (min-width: 601px)
+      max-height: 100%
+      
+
     @media (min-width: 601px)
       display: flex
 
     // gap: 2.5em
     a + a
-      margin-top: 2em
       @media (min-width: 601px)
-        margin-top: 0
         margin-left: 2em
 
     a
+      margin-top: 1em
+      @media (min-width: 601px)
+        margin-top: 0
+        
       &:last-child
         padding: 0.5em 2.5em
       &:not(:last-child)
@@ -45,8 +60,8 @@ nav
 
   #toggler:checked
     ~ .menu
-      text-align: center
-      display: block
+      // display: block
+      max-height: 600px
     ~ label #menu_button #bar
       background: none
       margin-top: 7px
