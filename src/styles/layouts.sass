@@ -311,8 +311,8 @@
   h2:last-of-type
     margin-top: 1em
 
-  p
-    padding-left: 1em
+  // p
+  //   padding-left: 1em
 
 #about_paragraphs
   margin-top: 5em
@@ -321,7 +321,9 @@
 
 #text_container
   p
-    padding-left: 1.5em
+    @media (min-width: 601px)
+      padding-left: 1.5em
+      
     max-width: 100%
 
     & + *
@@ -450,7 +452,9 @@ textarea
     padding: 0
     grid-gap: 0
     article:first-child
-      padding: 5em
+      padding: 2.5em
+      @media (min-width: 601px)
+        padding: 5em
       p
         margin-top: 1em
 
@@ -512,7 +516,10 @@ textarea
     padding: 0
     grid-gap: 0
     article
-      padding: 5em
+      padding: 2.5em
+      @media (min-width: 601px)
+        padding: 5em
+        
     article:first-child
       p
         margin-top: 2.5em
@@ -544,7 +551,7 @@ textarea
       margin-top: 1.5em
 
   #support
-    padding: 0 5em 5em 5em
+    padding-top: 0
 
 // }}}
 

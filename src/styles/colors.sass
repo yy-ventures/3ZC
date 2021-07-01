@@ -104,7 +104,9 @@ a
     color: $orange
 
 #text_container
-  border-left: 0.25em solid $orange
+  @media (min-width: 601px)
+    border-left: 0.25em solid $orange
+    
 
 #latest
   &:before
@@ -202,8 +204,9 @@ input[type="submit"]
   grid-gap: 5em
   h2
     color: $teal
-  p
-    border-left: 0.25em solid $orange
+
+  // p
+  //   border-left: 0.25em solid $orange
 
 
 .register
