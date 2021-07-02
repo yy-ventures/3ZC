@@ -344,13 +344,16 @@
   .input_section
     // overflow: hidden
     display: grid
-    grid-template-columns: auto
+
     @media (min-width: 601px)
       grid-template-columns: 1fr 1.5fr
 
     & > :nth-child(2n)
       align-self: end
-      margin-left: 2.5em
+      margin-top: 2.5em
+      @media (min-width: 601px)
+        margin-left: 2.5em
+        
 
   p
     margin-top: 2.5em
