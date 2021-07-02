@@ -352,6 +352,7 @@
       align-self: end
       margin-top: 2.5em
       @media (min-width: 601px)
+        margin-top: 0
         margin-left: 2.5em
         
 
@@ -571,22 +572,28 @@ form
 
   .field
     position: relative
-    padding-top: 1em
+    z-index: 1
 
-    & + *
-      margin-top: 0.5em
+
+    // & + *
+    //   margin-top: 0.5em
 
     // input,
     // textarea
     //   padding: 0 !important
 
+    // padding-top: 1em
     p
-      z-index: -1
       position: absolute
+      z-index: -1
       transition: transform 0.25s
-      // bottom: 0
       transform-origin: 0%
-      transform: translateY(-2em)
+
+      top: 0
+      left: 0
+
+      // bottom: 0
+      // transform: translateY(-2em)
 
     textarea + p
       top: 0

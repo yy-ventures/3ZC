@@ -163,8 +163,10 @@ input,
 select,
 textarea
   background: inherit
-  border: solid $fg_dark_text
-  border-width: 0 0 0.05em 0
+  border: none
+
+  // border: solid $fg_dark_text
+  // border-width: 0 0 0.05em 0
 
 input[type="submit"]
   background: $orange
@@ -368,6 +370,8 @@ form
   .confirm
     color: green
   .field
+    border: 1px solid black
+
     p
       color: grey
     &:after

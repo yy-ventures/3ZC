@@ -8,8 +8,18 @@ block main
         p#hint Complete the following registration form to register your 3ZERO Club.#[br] #[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
 
         form#form_register_club
+
+
           h3 Member Information
           .input_section
+
+            .field
+              input(placeholder=" " name="name_kp" required)
+              p Name of Key Person
+
+            .field
+              input(type="email" placeholder=" " name="email_kp" required)
+              p Email of Key Person
 
             article
               p Name of Key Person
@@ -145,9 +155,6 @@ block main
           //-   textarea(placeholder=" " rows="2" name="address" required)
           //-   p Club's Address
 
-          //- .field
-          //-   input(type="text" placeholder=" " name="city" required)
-          //-   p State/Province
 
           .input_section
 
