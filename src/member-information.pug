@@ -9,29 +9,37 @@ block main
 
         form#form_register_member
           h3 Member Information
-          .input_section
-            p First Name
-            input(type="text" placeholder="First Name" name="name_first" required)
-            p Last Name
-            input(type="text" placeholder="Last Name" name="name_last" required)
-            p Email
-            input(type="email" placeholder="Email" name="email" required)
 
-            p Gender
-            select#gender
-              option(selected value="Male") Male
-              option(value="Female") Female
-              option(value="Others") Others
-              option(value="Prefer not to answer") Prefer not to answer
+          .grid.two
 
-            p Date of Birth
-            input(type="date" name="date_of_birth" placeholder="Date of Birth" required)
-            p Contact Number
-            input(type="tel" name="contact" placeholder="Contact Number" required)
+            .field
+              input(placeholder=" " name="name_first" required)
+              p First Name
+            .field
+              input(placeholder=" " name="name_last" required)
+              p Last Name
+            .field
+              input(type="email" placeholder=" " name="email" required)
+              p Email
+            .field
+              input(type="tel" placeholder=" " name="contact" required)
+              p Contact Number
+            .field
+              input(type="date" placeholder=" " name="date_of_birth" required)
+              p Date of Birth
+            .field
+              select(required)#gender
+                option
+                option(value="Male") Male
+                option(value="Female") Female
+                option(value="Others") Others
+                option(value="Prefer not to answer") Prefer not to answer
+              p Gender
 
-            p What is your level of education?
-            select#education
-              option(selected value="psc") P.S.C.
+          .field
+            select(required)#education
+              option
+              option(value="psc") P.S.C.
               option(value="jsc") J.S.C.
               option(value="ssc") S.S.C.
               option(value="hsc") H.S.C.
@@ -40,15 +48,19 @@ block main
               option(value="hsc") PhD
               option(value="hsc") Diploma
               option(value="hsc") Didn't attend school
+            p Level of Education
 
-            p What is your profession?
-            input(type="text" name="profession" placeholder="Profession" required)
+          .grid.three
 
-            p Name of your organization
-            input(type="text" name="organization" placeholder="Organization" required)
-
-            p Your position in your organization
-            input(type="text" name="position" placeholder="Position" required)
+            .field
+              input(placeholder=" " name="profession")
+              p What is your profession?
+            .field
+              input(placeholder=" " name="organization")
+              p Name of your organization
+            .field
+              input(placeholder=" " name="position")
+              p Your position in your organization
 
             //- p Which of the three zeros attracts you the most?
             //- aside

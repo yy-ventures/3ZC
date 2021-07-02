@@ -125,6 +125,7 @@ submitter('#form_register_member', async () => {
   const gender = doms('#form_register_member #gender')[0].value
   const education = doms('#form_register_member #education')[0].value
 
+
   await db.collection('members').doc(id).update({
     name_first,
     name_last,
