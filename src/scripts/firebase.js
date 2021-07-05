@@ -19,3 +19,8 @@ const sign_in_google = async () => {
     console.log(erro)
   }
 }
+
+// (async () => {
+//   console.log(await db.collection('clubs').get())
+// })();
+
