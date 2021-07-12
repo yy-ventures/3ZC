@@ -23,8 +23,10 @@ module.exports = {
       },
     ],
     '@snowpack/plugin-webpack',
+    "@snowpack/plugin-babel",
     '@snowpack/plugin-postcss',
   ],
+
   devOptions: {
     port: 1234,
     bundle: false,
