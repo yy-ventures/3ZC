@@ -1,7 +1,6 @@
-export default {
+module.exports = {
   mount: {
-    // public: { url: "/public", static: true, resolve: false },
-    public: '/public',
+    public: { url: "/public", static: true, resolve: false },
     src: "/",
   },
   exclude: [
@@ -23,18 +22,8 @@ export default {
         },
       },
     ],
-
-    ['@snowpack/plugin-webpack',
-      {
-      }
-    ],
-
-    ['@snowpack/plugin-postcss',
-      {
-        // input: ['.sass', '.css']
-      }
-    ],
-
+    '@snowpack/plugin-webpack',
+    '@snowpack/plugin-postcss',
   ],
   devOptions: {
     port: 1234,
