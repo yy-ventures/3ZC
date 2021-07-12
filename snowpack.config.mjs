@@ -7,7 +7,7 @@ const files = await imagemin(['public/images/*.{jpg,png}'], {
   plugins: [
     imageminJpegtran(),
     imageminPngquant({
-      quality: [0.6, 0.8]
+      quality: [0.3, 0.5]
     })
   ]
 });
