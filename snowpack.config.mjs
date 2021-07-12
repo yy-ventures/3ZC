@@ -1,16 +1,16 @@
-import imagemin from 'imagemin';
-import imageminJpegtran from 'imagemin-jpegtran';
-import imageminPngquant from 'imagemin-pngquant';
-
-const files = await imagemin(['public/images/*.{jpg,png}'], {
-  destination: 'public/images/optimized',
-  plugins: [
-    imageminJpegtran(),
-    imageminPngquant({
-      quality: [0.3, 0.5]
-    })
-  ]
-});
+// import imagemin from 'imagemin';
+// import imageminJpegtran from 'imagemin-jpegtran';
+// import imageminPngquant from 'imagemin-pngquant';
+// 
+// const files = await imagemin(['public/images/*.{jpg,png}'], {
+//   destination: 'public/images/optimized',
+//   plugins: [
+//     imageminJpegtran(),
+//     imageminPngquant({
+//       quality: [0.3, 0.5]
+//     })
+//   ]
+// });
 
 export default {
   mount: {
