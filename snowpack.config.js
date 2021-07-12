@@ -23,7 +23,7 @@ module.exports = {
       },
     ],
     '@snowpack/plugin-webpack',
-    // "@snowpack/plugin-babel",
+    "@snowpack/plugin-babel",
     '@snowpack/plugin-postcss',
   ],
 
