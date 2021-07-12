@@ -19,6 +19,7 @@
     "postcss": "^8.3.5",
     "postcss-normalize": "^10.0.0",
     "postcss-preset-env": "^6.7.0",
+    "core-js": "3",
     "snowpack": "^3.5.8"
   },
   "browserslist": [
