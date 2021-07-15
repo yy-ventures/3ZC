@@ -26,9 +26,9 @@ export default {
     [
       "snowpack-plugin-inliner",
       {
-      "exts": ["jpg", "png", "gif", "svg", "jpeg"],
-      "limit": 1024 * 6,
-    }
+        "exts": ["jpg", "png", "gif", "svg", "jpeg"],
+        "limit": 1024 * 6,
+      }
     ],
 
     '@snowpack/plugin-webpack',

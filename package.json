@@ -19,8 +19,5 @@
     "postcss-preset-env": "^6.7.0",
     "snowpack": "^3.5.8",
     "snowpack-plugin-inliner": "^1.0.2"
-  },
-  "browserslist": [
-    "defaults"
-  ]
+  }
 }
