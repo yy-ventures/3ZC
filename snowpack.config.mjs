@@ -22,6 +22,15 @@ export default {
         },
       },
     ],
+
+    [
+      "snowpack-plugin-inliner",
+      {
+      "exts": ["jpg", "png", "gif", "svg", "jpeg"],
+      "limit": 1024 * 6,
+    }
+    ],
+
     '@snowpack/plugin-webpack',
     "@snowpack/plugin-babel",
     '@snowpack/plugin-postcss',
