@@ -37,7 +37,7 @@ export default {
   ],
 
   devOptions: {
-    port: 1234,
+    port: 1112,
     bundle: false,
     out: "dist",
     open: "none"
