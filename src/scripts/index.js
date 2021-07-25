@@ -127,7 +127,10 @@ submitter('#form_register_member', async () => {
   } = Object.fromEntries(new FormData(event.target));
   const id = new URL(window.location.href).searchParams.get('id');
 
+
   const zeros = get_checked_values(event.target.elements['zeros']);
+  const reasons = get_checked_values(event.target.elements['reasons']);
+
 
   const gender = doms('#form_register_member #gender')[0].value;
   const education = doms('#form_register_member #education')[0].value;
@@ -144,6 +147,7 @@ submitter('#form_register_member', async () => {
     profile_completed: true,
     gender,
     zeros,
+    reasons,
     education,
   });
 });
