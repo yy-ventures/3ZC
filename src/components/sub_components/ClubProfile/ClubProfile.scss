@@ -1,0 +1,19 @@
+$primary-color: #46a4a3;
+$secondary-color: #ef9740;
+$background-color: #eeeeee;
+$neutral-color: #ffffff;
+
+.three-zero-container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.club-profile{
+    background-color: $background-color;
+    .club-profile-header{
+        h1{
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+}

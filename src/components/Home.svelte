@@ -1,0 +1,69 @@
+<script>
+  import Header  from "./sub_components/Header.svelte";
+
+	const data_header = {
+		h2: 'Creating a World of',
+		h1: 'THREE ZEROS',
+		image: 'mission_vision',
+	}
+</script>
+
+<template lang="pug">
+  Header({...data_header})
+  #home
+		//- regsitration{{{
+		section#registration
+			article.faded_out
+				h2.moved_down(style="--order: 1") Create a 3ZERO Club
+				p.moved_down(style="--order: 1.5") Ideate, create and lead with your entrepreneurial spirit
+				p.moved_down(style="--order: 1.5") to create a world of three zeros
+				a(href="register" style="--order: 2").orange_button.moved_down REGISTER NOW
+				//- a(href="sign-up" style="--order: 3").orange_button.moved_down REGISTER NOW
+		// }}}
+		//- who we are{{{
+		section#who_we_are.grid.two
+			article.moved_left
+				img(src="/images/optimized/who_we_are.jpg").shadow
+			article.moved_right
+				h3 We Are
+				h2 Creating a World of Three Zeros
+				#text_container
+					p The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros — zero net carbon emission, zero wealth concentration for ending poverty, and zero unemployment by unleashing entrepreneurship in all.
+				a(href="about") Learn More
+		// }}}
+		//- latest{{{
+		section#latest
+			h3 Latest
+			h2 Social Business and 3ZERO Club Events
+			//- #latest_container.grid.three
+			#latest_container.grid.two
+				article(style="--order: 0").moved_down
+					img(src="/images/optimized/events_1.jpg").shadow
+					h3 Social Business Design Competition
+					a(href="#") Coming Soon
+				article(style="--order: 1").moved_down
+					img(src="/images/optimized/events_2.jpg").shadow
+					h3 Social Fiction Design Competition
+					a(href="#") Coming Soon
+				//- article(style="--order: 3").moved_down
+				//-   img(src="public/images/optimized/events_5.jpg").shadow
+				//-   h3 Social Business Day
+				//-   a(href="https://socialbusinesspedia.com/events/sbd2021" target="_blank" rel="noopener noreferrer") Register Now
+		// }}}
+		//- call to action{{{
+		section#call_to_action.grid.two
+			article.moved_left
+
+				//- h2 Build networks, take actions and unfold yourself as a powerful force to create
+				//- h2 a world of three zeros.
+
+				h2 Build networks, take actions and unfold yourself as a powerful force to create a world of three zeros
+
+			//- a(href="" target="_blank" rel="noopener noreferrer").moved_right
+			//-   h2 REGISTER NOW
+
+			a(href="register").moved_right.orange_button REGISTER NOW
+			//- a(href="sign-up").moved_right.orange_button REGISTER NOW
+
+		// }}}
+</template>

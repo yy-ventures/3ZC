@@ -1,0 +1,76 @@
+$primary-color: #46a4a3;
+$secondary-color: #ef9740;
+$background-color: #aadcda;
+$neutral-color: #ffffff;
+
+.signin-section{
+    min-height: 80vh;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sigin-form{
+        padding: 1rem 3rem;
+        background-color: $neutral-color;
+        width: 500px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.1);
+        form{
+            padding: 20px;
+            
+            h4{
+                color: $primary-color;
+                font-weight: 700;
+                padding: 1rem 0;
+
+                .zero-orange{
+                    color: $secondary-color;
+                }
+            }
+            input{
+                border: none;
+                outline: none;
+                background-color: $neutral-color;
+                padding: 10px;
+                color: #aaa;
+                border-bottom: 1px solid #aaa;
+                width: 100%;
+                margin-top: 20px;
+            }
+            .password-box{
+                position: relative;
+                p{
+                    color: #aaa;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    cursor: pointer;
+                }
+            }
+
+            .conditional-btn{
+                padding: 20px 0;
+                margin-top: 20px;
+                button{
+                    border: none;
+                    outline: none;
+                    background-color: $secondary-color;
+                    color: $neutral-color;
+                    padding: 10px 24px;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 15px;
+                    margin-top: 1rem;
+                    a{
+                        text-decoration: none;
+                        color: $secondary-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

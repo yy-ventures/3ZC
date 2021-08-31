@@ -1,0 +1,42 @@
+$primary-color: #46a4a3;
+$secondary-color: #ef9740;
+$background-color: #ffffff;
+$label-color: #666666;
+$heading-color: #444444;
+
+.club-info{
+    background-color: $background-color;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.1);
+
+    .club-info-header{
+        height: 200px;
+        background-color: $primary-color;
+        border-radius: 15px 15px 0 0;
+
+        h2{
+            font-weight: bold;
+            color: $background-color;
+            padding: 20px;
+            font-size: 30px;
+        }
+    }
+    .club-info-body{
+        label{
+            color: $label-color;
+            padding-bottom: 5px;
+        }
+        h6{
+            font-size: 18px;
+            font-weight: 600;
+            color: $heading-color;
+        }
+        .edit-info-link{
+            a{
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+

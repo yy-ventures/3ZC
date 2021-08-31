@@ -1,0 +1,382 @@
+<template lang="pug">
+  main#sign_up
+    section.register
+      article
+        h1 3ZERO Club
+        h2 Club Registration Form
+        p#hint Complete the following registration form to register your 3ZERO Club.#[br] #[br] Please note that after your 3ZERO Club registration, all of the five members need to complete their profile #[strong using the same email address] in order to complete the registration of the 3ZERO Club. For questions, please contact at connect@3zero.club.
+
+        form#form_register_club
+
+
+          h3 Member Information
+          //- #member_info
+          .grid.two
+            .field
+              input(placeholder=" " name="name_kp" required)
+              p Name of Key Person
+            .field
+              input(type="email" placeholder=" " name="email_kp" required)
+              p Email of the Key Person
+
+            .field
+              input(placeholder=" " name="name_dkp" required)
+              p Name of the Deputy Key Person
+            .field
+              input(type="email" placeholder=" " name="email_dkp" required)
+              p Email of the Deputy Key Person
+
+
+            .field
+              input(placeholder=" " name="name_y1" required)
+              p Name of the youngest member  other than the first two members
+            .field
+              input(type="email" placeholder=" " name="email_y1" required)
+              p Email of the youngest member  other than the first two members
+
+            .field
+              input(placeholder=" " name="name_y2" required)
+              p Name of the youngest member between the remaining two members
+            .field
+              input(type="email" placeholder=" " name="email_y2" required)
+              p Email of the youngest member between the remaining two members
+
+            .field
+              input(placeholder=" " name="name_y3" required)
+              p Name of the remaining member
+            .field
+              input(type="email" placeholder=" " name="email_y3" required)
+              p Email of the remaining member
+
+          //- #age_info
+          .grid.three
+            .field
+              input(type="number" placeholder=" " name="age_oldest" required)
+              p Age of the oldest member  of the Club
+            .field
+              input(type="number" placeholder=" " name="age_youngest" required)
+              p Age of the youngest member  of the Club
+            .field
+              input(type="number" placeholder=" " name="age_difference" required)
+              p Difference of age between the youngest and oldest members
+
+          p#hint #[strong Attention:] If the difference between oldest and the youngest member shown above is more than 7 years, please replace one member to bring the age difference under 7 years.
+          h3 Club Information
+
+          .field 
+            select(required)#focus
+              option
+              option(value="Environment and Climate Change") Environment & Climate Change 
+              option(value="Technology & Innovation") Technology & Innovation
+              option(value="WASH") WASH
+              option(value="Education") Education
+              option(value="Microcredit") Microcredit
+              option(value="Health & Wellbeing") Health & Wellbeing
+              option(value="Entrepreneurship") Entrepreneurship
+              option(value="Sports") Sports
+              option(value="History") History
+              option(value="Employment") Employment
+              option(value="Circular Economy") Circular Economy
+              option(value="Waste") Waste
+              option(value="Art, Culture & Music") Art, Culture & Music
+              option(value="People with Disabilities") People with Disabilities
+              option(value="Tourism") Tourism
+              option(value="Agriculture") Agriculture
+              option(value="Economics") Economics
+              option(value="Forestry") Forestry
+              option(value="Food & Nutrition") Food & Nutrition
+              option(value="Mother & Child") Mother & Child
+              option(value="Social Business") Social Business
+              option(value="Literature") Literature
+              option(value="Transportation") Transportation
+              option(value="Energy") Energy
+              option(value="Social Fiction") Social Fiction
+              option(value="Journalism") Journalism
+            p Club's Focus Area
+
+          p Which of the three zeros attracts you the most?
+          aside
+            label
+              input(type="checkbox" value="Zero net carbon emission" name="zeros")
+              | Zero net carbon emission 
+            label
+              input(type="checkbox" value="Zero wealth concentration for ending poverty" name="zeros")
+              | Zero wealth concentration for ending poverty
+            label
+              input(type="checkbox" value="Zero unemployment by unleashing entrepreneurship in all" name="zeros")
+              | Zero unemployment by unleashing entrepreneurship in all
+
+
+          p What is the spirit Behind your 3ZERO Club? (Please select at least three of the following spirit statements)
+          aside
+            label
+              input(type="checkbox" value="3ZERO Clubs plant the seeds of 3 zeros in the minds of young people." name="spirit")
+              | 3ZERO Clubs plant the seeds of 3 zeros in the minds of young people.
+            label
+              input(type="checkbox" value="Youth is power. But have you decided what you want to use it for?" name="spirit")
+              | Youth is power. But have you decided what you want to use it for?  
+            label
+              input(type="checkbox" value="Don’t wait. Get ready to grab the steering wheel of the planet now." name="spirit")
+              | Don’t wait. Get ready to grab the steering wheel of the planet now.
+            label
+              input(type="checkbox" value="If you want to see the 3ZERO world in your lifetime, get started now." name="spirit")
+              | If you want to see the 3ZERO world in your lifetime, get started now.
+            label
+              input(type="checkbox" value="Understanding the problems is halfway to solutions." name="spirit")
+              | Understanding the problems is halfway to solutions.
+            label
+              input(type="checkbox" value="Explore together and get into action." name="spirit")
+              | Explore together and get into action.
+            label
+              input(type="checkbox" value="Youth is the power. But there is no battery pack to store this power. Either you use up every second of it, or say goodbye to it. 3ZERO Club invites you to use every second of your power by transforming it into social actions. Convert your power into results." name="spirit")
+              | Youth is the power. But there is no battery pack to store this power. Either you use up every second of it, or say goodbye to it. 3ZERO Club invites you to use every second of your power by transforming it into social actions. Convert your power into results.
+            label
+              input(type="checkbox" value="If you don’t use your power, it will be wasted away." name="spirit")
+              | If you don’t use your power, it will be wasted away.
+            label
+              input(type="checkbox" value="Grab the steering wheel of the planet now and take it to the destination of your choice." name="spirit")
+              | Grab the steering wheel of the planet now and take it to the destination of your choice.
+            label
+              input(type="checkbox" value="Make 3ZERO your immediate destination. We have to get there as soon as we can." name="spirit")
+              | Make 3ZERO your immediate destination. We have to get there as soon as we can.
+            label
+              input(type="checkbox" value="Assess the present, decide the future, and go for it." name="spirit")
+              | Assess the present, decide the future, and go for it.
+            label
+              input(type="checkbox" value="THINK, NETWORK, AND ACT" name="spirit")
+              | THINK, NETWORK, AND ACT
+
+          h3 Club Location
+
+
+          #location_info
+            .field
+              select(required)#country
+                option
+                option(value="Afghanistan") Afghanistan
+                option(value="Albania") Albania
+                option(value="Algeria") Algeria
+                option(value="Andorra") Andorra
+                option(value="Angola") Angola
+                option(value="Antigua") Antigua
+                option(value="Argentina") Argentina
+                option(value="Armenia") Armenia
+                option(value="Australia") Australia
+                option(value="Austria") Austria
+                option(value="Azerbaijan") Azerbaijan
+                option(value="Bahamas") Bahamas
+                option(value="Bahrain") Bahrain
+                option(value="Bangladesh") Bangladesh
+                option(value="Barbados") Barbados
+                option(value="Belarus") Belarus
+                option(value="Belgium") Belgium
+                option(value="Belize") Belize
+                option(value="Benin") Benin
+                option(value="Bhutan") Bhutan
+                option(value="Bolivia") Bolivia
+                option(value="Bosnia") Bosnia
+                option(value="Botswana") Botswana
+                option(value="Brazil") Brazil
+                option(value="Brunei") Brunei
+                option(value="Bulgaria") Bulgaria
+                option(value="Burkina") Burkina
+                option(value="Burundi") Burundi
+                option(value="Côte") Côte
+                option(value="Cabo") Cabo
+                option(value="Cambodia") Cambodia
+                option(value="Cameroon") Cameroon
+                option(value="Canada") Canada
+                option(value="Central") Central
+                option(value="Chad") Chad
+                option(value="Chile") Chile
+                option(value="China") China
+                option(value="Colombia") Colombia
+                option(value="Comoros") Comoros
+                option(value="Congo") Congo
+                option(value="Costa") Costa
+                option(value="Croatia") Croatia
+                option(value="Cuba") Cuba
+                option(value="Cyprus") Cyprus
+                option(value="Czechia") Czechia
+                option(value="Democratic") Democratic
+                option(value="Denmark") Denmark
+                option(value="Djibouti") Djibouti
+                option(value="Dominica") Dominica
+                option(value="Dominican") Dominican
+                option(value="Ecuador") Ecuador
+                option(value="Egypt") Egypt
+                option(value="El") El
+                option(value="Equatorial") Equatorial
+                option(value="Eritrea") Eritrea
+                option(value="Estonia") Estonia
+                option(value="Eswatini") Eswatini
+                option(value="Ethiopia") Ethiopia
+                option(value="Fiji") Fiji
+                option(value="Finland") Finland
+                option(value="France") France
+                option(value="Gabon") Gabon
+                option(value="Gambia") Gambia
+                option(value="Georgia") Georgia
+                option(value="Germany") Germany
+                option(value="Ghana") Ghana
+                option(value="Greece") Greece
+                option(value="Grenada") Grenada
+                option(value="Guatemala") Guatemala
+                option(value="Guinea") Guinea
+                option(value="Guine") Guine
+                option(value="Guyana") Guyana
+                option(value="Haiti") Haiti
+                option(value="Holy") Holy
+                option(value="Honduras") Honduras
+                option(value="Hungary") Hungary
+                option(value="Iceland") Iceland
+                option(value="India") India
+                option(value="Indonesia") Indonesia
+                option(value="Iran") Iran
+                option(value="Iraq") Iraq
+                option(value="Ireland") Ireland
+                option(value="Israel") Israel
+                option(value="Italy") Italy
+                option(value="Jamaica") Jamaica
+                option(value="Japan") Japan
+                option(value="Jordan") Jordan
+                option(value="Kazakhstan") Kazakhstan
+                option(value="Kenya") Kenya
+                option(value="Kiribati") Kiribati
+                option(value="Kuwait") Kuwait
+                option(value="Kyrgyzstan") Kyrgyzstan
+                option(value="Laos") Laos
+                option(value="Latvia") Latvia
+                option(value="Lebanon") Lebanon
+                option(value="Lesotho") Lesotho
+                option(value="Liberia") Liberia
+                option(value="Libya") Libya
+                option(value="Liechtenstein") Liechtenstein
+                option(value="Lithuania") Lithuania
+                option(value="Luxembourg") Luxembourg
+                option(value="Madagascar") Madagascar
+                option(value="Malawi") Malawi
+                option(value="Malaysia") Malaysia
+                option(value="Maldives") Maldives
+                option(value="Mali") Mali
+                option(value="Malta") Malta
+                option(value="Marshall") Marshall
+                option(value="Mauritania") Mauritania
+                option(value="Mauritius") Mauritius
+                option(value="Mexico") Mexico
+                option(value="Micronesia") Micronesia
+                option(value="Moldova") Moldova
+                option(value="Monaco") Monaco
+                option(value="Mongolia") Mongolia
+                option(value="Montenegro") Montenegro
+                option(value="Morocco") Morocco
+                option(value="Mozambique") Mozambique
+                option(value="Myanmar") Myanmar
+                option(value="Namibia") Namibia
+                option(value="Nauru") Nauru
+                option(value="Nepal") Nepal
+                option(value="Netherlands") Netherlands
+                option(value="New") New
+                option(value="Nicaragua") Nicaragua
+                option(value="Niger") Niger
+                option(value="Nigeria") Nigeria
+                option(value="North") North
+                option(value="North") North
+                option(value="Norway") Norway
+                option(value="Oman") Oman
+                option(value="Pakistan") Pakistan
+                option(value="Palau") Palau
+                option(value="Palestine") Palestine
+                option(value="Panama") Panama
+                option(value="Papua") Papua
+                option(value="Paraguay") Paraguay
+                option(value="Peru") Peru
+                option(value="Philippines") Philippines
+                option(value="Poland") Poland
+                option(value="Portugal") Portugal
+                option(value="Qatar") Qatar
+                option(value="Romania") Romania
+                option(value="Russia") Russia
+                option(value="Rwanda") Rwanda
+                option(value="Saint") Saint
+                option(value="Saint") Saint
+                option(value="Saint") Saint
+                option(value="Samoa") Samoa
+                option(value="San") San
+                option(value="Sao") Sao
+                option(value="Saudi") Saudi
+                option(value="Senegal") Senegal
+                option(value="Serbia") Serbia
+                option(value="Seychelles") Seychelles
+                option(value="Sierra") Sierra
+                option(value="Singapore") Singapore
+                option(value="Slovakia") Slovakia
+                option(value="Slovenia") Slovenia
+                option(value="Solomon") Solomon
+                option(value="Somalia") Somalia
+                option(value="South") South
+                option(value="South") South
+                option(value="South") South
+                option(value="Spain") Spain
+                option(value="Sri") Sri
+                option(value="Sudan") Sudan
+                option(value="Suriname") Suriname
+                option(value="Sweden") Sweden
+                option(value="Switzerland") Switzerland
+                option(value="Syria") Syria
+                option(value="Tajikistan") Tajikistan
+                option(value="Tanzania") Tanzania
+                option(value="Thailand") Thailand
+                option(value="Timo") Timo
+                option(value="Togo") Togo
+                option(value="Tonga") Tonga
+                option(value="Trinidad") Trinidad
+                option(value="Tunisia") Tunisia
+                option(value="Turkey") Turkey
+                option(value="Turkmenistan") Turkmenistan
+                option(value="Tuvalu") Tuvalu
+                option(value="Uganda") Uganda
+                option(value="Ukraine") Ukraine
+                option(value="United") United
+                option(value="United") United
+                option(value="United") United
+                option(value="Uruguay") Uruguay
+                option(value="Uzbekistan") Uzbekistan
+                option(value="Vanuatu") Vanuatu
+                option(value="Venezuela") Venezuela
+                option(value="Vietnam") Vietnam
+                option(value="Yemen") Yemen
+                option(value="Zambia") Zambia
+                option(value="Zimbabwe") Zimbabwe
+              p Country
+            .field
+              input(placeholder=" " name="city" required)
+              p City
+            .field
+              input(placeholder=" " name="state" required)
+              p State/Province
+            .field
+              input(placeholder=" " name="zipcode" required)
+              p Postal/Zip Code
+
+          .field
+            textarea(placeholder=" " rows="2" name="address" required)
+            p Club's Address
+
+          h3 Decleration
+          label
+            input(type="checkbox" value="We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions." name="declerations")
+            | We are fully aligned with the goals of three zeros and commit ourselves to work for promoting those goals through our own actions.
+          label
+            input(type="checkbox" value="We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook." name="declerations")
+            | We have decided to form a 3ZERO Club as per the guidelines of the 3ZERO Club Handbook.
+          label
+            input(type="checkbox" value="We would like to inform our Club’s yearly activities to the 3Z Global Centre." name="declerations")
+            | We would like to inform our Club’s yearly activities to the 3Z Global Centre.
+          label
+            input(type="checkbox" value="We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre." name="declerations")
+            | We would be happy to get information on the latest events, workshops and opportunities from 3Z Global Centre.
+
+          input.submit(type="submit" value="Submit")
+          p.confirm The form was successfully submitted. Redirecting you to Home.
+</template>

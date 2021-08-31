@@ -115,6 +115,10 @@
 // }}}
 // latest{{{
 #latest
+  .grid
+    @media (min-width: 601px)
+      padding: 0 10em
+      
   &:before
     height: 100%
     @media (min-width: 601px)
@@ -204,10 +208,22 @@
   padding: 5em 0
 
   form
+
+    .wide,
+    input[type="email"]
+      width: 100%
+
+
     article
       margin-top: 2.5em
       p
         margin-bottom: 1em
+
+      // input:not([type]),
+      // input[type="email"]
+      //   width: 100%
+
+
 
   section
     border-radius: 1em
@@ -287,8 +303,8 @@
 
 // }}}
 
-// body
-//   overflow-x: hidden !important
+body
+  overflow-x: hidden
 
 #mission_vision
   place-items: center
@@ -299,8 +315,8 @@
   h2:last-of-type
     margin-top: 1em
 
-  p
-    padding-left: 1em
+  // p
+  //   padding-left: 1em
 
 #about_paragraphs
   margin-top: 5em
@@ -309,7 +325,9 @@
 
 #text_container
   p
-    padding-left: 1.5em
+    @media (min-width: 601px)
+      padding-left: 1.5em
+      
     max-width: 100%
 
     & + *
@@ -330,13 +348,17 @@
   .input_section
     // overflow: hidden
     display: grid
-    grid-template-columns: auto
+
     @media (min-width: 601px)
       grid-template-columns: 1fr 1.5fr
 
     & > :nth-child(2n)
       align-self: end
-      margin-left: 2.5em
+      margin-top: 2.5em
+      @media (min-width: 601px)
+        margin-top: 0
+        margin-left: 2.5em
+        
 
   p
     margin-top: 2.5em
@@ -351,7 +373,6 @@
   z-index: 999
   background: white
   opacity: 1
-  transition: opacity 1.5s
 
 #resources
   .title
@@ -432,6 +453,11 @@ textarea
     padding: 0.15em
     margin-left: 0.25em
     margin-bottom: 0.10em
+
+  .grid
+    @media (min-width: 601px)
+      padding: 0 10em
+
 // }}}
 // about{{{
 #about
@@ -439,7 +465,9 @@ textarea
     padding: 0
     grid-gap: 0
     article:first-child
-      padding: 5em
+      padding: 2.5em
+      @media (min-width: 601px)
+        padding: 5em
       p
         margin-top: 1em
 
@@ -462,13 +490,13 @@ textarea
 
     .grid
       margin-top: 2.5em
-      grid-template-columns: repeat(3, auto)
+      grid-template-columns: repeat(1, auto)
       grid-gap: 2em 0.5em
       @media (min-width: 601px)
         grid-template-columns: repeat(5, auto)
 
       overflow: hidden
-      max-height: 0
+      max-height: 600px
       transition: max-height 0.5s
 
       p
@@ -485,11 +513,14 @@ textarea
       display: flex
       justify-content: space-between
 
+      .arrow
+        transform: rotate(90deg)
+
     #toggler_accordion:checked
       ~ .grid
-        max-height: 600px
+        max-height: 0
       ~ label .arrow:after
-        transform: rotate(45deg)
+        transform: rotate(-135deg)
 
   #activities,
   #support
@@ -501,7 +532,10 @@ textarea
     padding: 0
     grid-gap: 0
     article
-      padding: 5em
+      padding: 2.5em
+      @media (min-width: 601px)
+        padding: 5em
+        
     article:first-child
       p
         margin-top: 2.5em
@@ -533,6 +567,75 @@ textarea
       margin-top: 1.5em
 
   #support
-    padding: 0 5em 5em 5em
+    padding-top: 0
 
 // }}}
+
+form
+  .grid
+    align-items: end
+
+  .confirm
+    opacity: 0
+    margin-top: 2.5em
+    text-align: center
+    width: 100%
+    margin: 0
+
+  .field
+    position: relative
+    z-index: 1
+
+    select
+      padding-bottom: 0.5em
+
+
+    // & + *
+    //   margin-top: 0.5em
+
+    // input,
+    // textarea
+    //   padding: 0 !important
+
+    padding-top: 5em
+
+    p
+      position: absolute
+      z-index: -1
+
+      bottom: 10%
+      // padding: 0.5em
+
+      // bottom: 0
+      // transform: translateY(-2em)
+
+    textarea + p
+      top: 40%
+
+    &:after,
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      bottom: 0
+      height: 0.10em
+
+#form_register_club
+  #member_info,
+  #age_info,
+  #location_info
+    display: grid
+    grid-gap: 2.5em
+    align-items: end
+
+  #member_info
+    @media (min-width: 601px)
+      grid-template-columns: repeat(2, 1fr)
+  #location_info
+    @media (min-width: 601px)
+      grid-template-columns: repeat(4, 1fr)
+  #age_info
+    margin-top: 2.5em
+    @media (min-width: 601px)
+      grid-template-columns: repeat(3, 1fr)
+      

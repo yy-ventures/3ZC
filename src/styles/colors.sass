@@ -49,6 +49,8 @@ a
 
   a
     text-decoration: underline
+    &:hover
+      color: $orange
 
   i
     color: $teal
@@ -75,10 +77,18 @@ a
       display: inline-block
       transform: rotate(-45deg)
       border: solid $teal
-      border-width: 0 2.5px 2.5px 0
-      padding: 2.5px
+      border-width: 0 0.15em 0.15em 0
+      padding: 0.20em
       margin-left: 0.5em
-      margin-bottom: 0.10em
+
+    &:hover
+      background: $teal
+      color: $fg_light_title
+      box-shadow: 0 0 0.20em 0 black
+      &:after
+        border: solid $fg_light_title
+        border-width: 0 0.15em 0.15em 0
+
 
 #registration
   article
@@ -104,7 +114,9 @@ a
     color: $orange
 
 #text_container
-  border-left: 0.25em solid $orange
+  @media (min-width: 601px)
+    border-left: 0.25em solid $orange
+    
 
 #latest
   &:before
@@ -121,6 +133,8 @@ a
   a
     color: $orange
     font-weight: bold
+    &:hover
+      color: lighten($orange, 10%)
 
 
 .shadow
@@ -149,8 +163,10 @@ input,
 select,
 textarea
   background: inherit
-  border: solid $fg_dark_text
-  border-width: 0 0 0.05em 0
+  border: none
+
+  // border: solid $fg_dark_text
+  // border-width: 0 0 0.05em 0
 
 input[type="submit"]
   background: $orange
@@ -159,6 +175,7 @@ input[type="submit"]
 
   &:hover
     background: darken($orange, 10%)
+    box-shadow: 0 0 0.20em 0 black
   &:active
     background: lighten($orange, 10%)
 
@@ -190,8 +207,12 @@ input[type="submit"]
         background: #0183bf
 
 .orange_button
-  background: $orange
   color: $fg_light_title
+
+  background: $orange
+  &:hover
+    background: darken($orange, 10%)
+    box-shadow: 0 0 0.20em 0 black
 
 #Layer_1
   .cls-1,
@@ -202,8 +223,9 @@ input[type="submit"]
   grid-gap: 5em
   h2
     color: $teal
-  p
-    border-left: 0.25em solid $orange
+
+  // p
+  //   border-left: 0.25em solid $orange
 
 
 .register
@@ -228,7 +250,7 @@ input[type="submit"]
   &:after
     content: ""
     display: block
-    height: 3px
+    height: 0.15em
     transform: scaleX(0)
     background: $orange
 
@@ -344,3 +366,23 @@ input[type="submit"]
   #resources_redirect
     a
       color: $orange
+
+form
+  .confirm
+    color: green
+  .field
+
+    // border: 1px solid black
+
+    // border: solid currentColor
+    // border-width: 0 0 0.05em 0
+    // &:focus-within
+    //   border: none
+
+    p
+      color: grey
+
+    &:after
+      background: $orange
+    &:before
+      background: grey

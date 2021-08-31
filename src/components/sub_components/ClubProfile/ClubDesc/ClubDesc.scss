@@ -1,0 +1,79 @@
+$primary-color: #46a4a3;
+$secondary-color: #ef9740;
+$background-color: #ffffff;
+$label-color: #666666;
+$heading-color: #555555;
+
+.club-desc{
+    background-color: $background-color;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.1);
+    border-radius: 15px;
+
+    .club-basic-info{
+        .club-basic-info-header{
+            h6{
+                color: $primary-color;
+                font-size: 18px;
+                position: relative;
+            }
+            h6::after{
+                content: "";
+                display: block;
+                position: absolute;
+                border-bottom: 1px solid $secondary-color;
+                width: 75%;
+                left: 25%;
+                bottom: 15%;
+            }
+            a{
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+        .club-basic-info-list{
+            label{
+                color: $label-color;
+            }
+            h6{
+                font-size: 16px;
+                font-weight: bold;
+                color: $heading-color;
+                margin-top: 5px;
+            }
+        }
+    }
+    .club-member-info{
+        .club-member-info-header{
+            h6{
+                color: $primary-color;
+                font-size: 18px;
+                position: relative;
+            }
+            h6::after{
+                content: "";
+                display: block;
+                position: absolute;
+                border-bottom: 1px solid $secondary-color;
+                width: 65%;
+                left: 35%;
+                bottom: 15%;
+            }
+            a{
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+        .club-member-info-list{
+            label{
+                color: $label-color;
+                padding-bottom: 10px;
+            }
+            h5{
+                font-size: 17px;
+                font-weight: bold;
+                color: $heading-color;
+                margin-top: 5px;
+            }
+        }
+    }
+}

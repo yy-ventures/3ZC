@@ -1,0 +1,41 @@
+---
+import "../styles/index.sass";
+
+import Navbar from '../components/sub_components/Navbar.svelte';
+import Preloader from '../components/sub_components/Preloader.svelte';
+import Footer from '../components/sub_components/Footer.svelte';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      src="https://kit.fontawesome.com/24890fb8de.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js" defer></script>
+
+    <script src="../scripts/main.js" type="module" defer></script>
+
+    <title>3ZERO Club | Creating a World of Three Zeros</title>
+    <meta name="description" content="The 3ZERO Club is an initiative towards achieving the Nobel Peace Laureate Professor Muhammad Yunus’s vision of creating a world of three zeros —  zero net carbon emission, zero wealth concentration for ending poverty, zero unemployment by unleashing entrepreneurship in all." />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <main>
+      <Preloader/>
+      <Navbar/>
+      <slot/>
+      <Footer/>
+    </main>
+  </body>
+
+</html>
